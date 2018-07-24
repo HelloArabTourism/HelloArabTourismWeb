@@ -61,6 +61,8 @@ try {
 } catch (Exception $e) {
     $fmsg= 'Message could not be sent. Mailer Error: '. $mail->ErrorInfo;
 }
+            header('location: login.php');
+
         }else{
             $fmsg .= " User Registration Failed";
              }

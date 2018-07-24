@@ -34,7 +34,6 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
-
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.php">Hello Arab Tourism</a>
@@ -82,27 +81,16 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
       </ul>
     </div>
   </nav>
-  <section id="welcome">
-             <?php
+ <!--Start Design-->
+    <?php
     $sql = "SELECT * from `users` WHERE email='$email'";
     $res= mysqli_query($connection, $sql);
     $r = mysqli_fetch_assoc($res);
     ?>
-     <div class="container">
-     <div class="row">
-         <div class="col-md-12">
-             <br>
-             <h1 class="text-center text-responsive">Welcome to Hello Arab Tourism System<br><?php echo $r['fname'];echo " "; echo $r['lname'];?> </h1><br>
-             <img class="rounded mx-auto d-block" src="../img/bg.png">
-         </div>
-         <br>
-
-     </div>
- 
-
-      </div>
-      
-  </section>
+    
+    
+    
+    
     
     <footer class="sticky-footer">
       <div class="container-fluid">

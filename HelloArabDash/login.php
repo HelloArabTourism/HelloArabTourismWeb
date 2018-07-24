@@ -1,15 +1,22 @@
 <?php
+session_start();
 require_once('connect.php');
+if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
+    echo "User Already Login";
+    echo $_SESSION['email'];
+}
 if(isset($_POST) & !empty($_POST)){
-$email =$_POST['email'];
-$password = $_POST['password'];
-    $sql = "SELECT * FROM `users` WHERE `email`= '$email' AND `password`= '$password'";
+$email =mysqli_real_escape_string($connection, $_POST['email']);
+$password = md5($_POST['password']);
+    $sql = "SELECT * FROM `users` WHERE `email`= '$email' AND `password`= '$password' AND `active`= 1";
     $result = mysqli_query($connection, $sql);
     $count = mysqli_num_rows($result);
     if($count == 1){
-        echo "User exist";
+       $_SESSION['email'] = $email;
+        header('location: index.php');
+
     }else{
-        echo "User not exist";
+        echo "User doesn't exist";
     }
 
 }
