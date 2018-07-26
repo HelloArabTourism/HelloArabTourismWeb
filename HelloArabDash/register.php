@@ -3,20 +3,25 @@
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-//Load Composer's autoloader
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require_once('connect.php');
 include('config.php');
+//Load Composer's autoloader
+
 if(isset($_POST) & !empty($_POST)){
-    $fname = mysqli_real_escape_string($connection, $_POST['fname']);
-    $lname = mysqli_real_escape_string($connection, $_POST['lname']);
+
+        $image = $_FILES['image']['tmp_name'];
+        echo $imgContent = addslashes(file_get_contents($image));
+    
+
+    $name = mysqli_real_escape_string($connection, $_POST['name']);
     $email = mysqli_real_escape_string($connection, $_POST['email']);
     $verification_key = md5($email);
     $password = md5($_POST['password']);
     $cpassword = md5($_POST['cpassword']);
+
     if($password == $cpassword){
         $fmsg="";
         $sqlemail = "SELECT * FROM users WHERE email = '$email'";
@@ -25,9 +30,11 @@ if(isset($_POST) & !empty($_POST)){
         if($count == 1){
             $fmsg .= "Email exisit in database. Please reset your password";
         }
+            
+   
         
         
-        $sql = "INSERT INTO `users`(`fname`, `lname`, `email`, `password`, `verification_key`) VALUES ('$fname','$lname','$email','$password', '$verification_key')";
+        $sql = "INSERT INTO `users`(`name`, `email`, `image`, `password`, `verification_key`) VALUES ('$name','$email', '$imgContent' ,'$password', '$verification_key')";
         $result = mysqli_query($connection, $sql);
         if($result){
            $smsg = "User Registared Successfully";
@@ -128,19 +135,15 @@ try {
       <img src="../img/logo.png"><br>
       Register an Account</div>
       <div class="card-body">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
           <div class="form-group">
             <div class="form-row">
-              <div class="col-md-6">
-                <label for="exampleInputName">First name</label>
-                <input class="form-control" id="exampleInputName" name="fname" type="text" aria-describedby="nameHelp" placeholder="Enter first name" value="<?php
-                if(isset($_POST) & !empty($_POST)){echo $fname;}?>" required autofocus>
+              <div class="col-md-12">
+                <label for="exampleInputName">Enter Name</label>
+                <input class="form-control" id="exampleInputName" name="name" type="text" aria-describedby="nameHelp" placeholder="Enter Name" value="<?php
+                if(isset($_POST) & !empty($_POST)){echo $name;}?>" required autofocus>
               </div>
-              <div class="col-md-6">
-                <label for="exampleInputLastName">Last name</label>
-                <input class="form-control" id="exampleInputLastName" name="lname" type="text" aria-describedby="nameHelp" placeholder="Enter last name" value="<?php
-                if(isset($_POST) & !empty($_POST)){echo $lname;}?>" required>
-              </div>
+
             </div>
           </div>
           <div class="form-group">
@@ -163,25 +166,16 @@ try {
                 <input class="form-control" id="exampleConfirmPassword" name="cpassword" type="password" placeholder="Confirm password">
               </div>
             </div>
-            <!--<lable align="right">Image:</lable>  <br>                          
-                            <input type="file" name="image" id="profile-img" required/><br>
-                                    <img src="" id="profile-img-tag" width="100px" />
-
-                                    <script type="text/javascript">
-                                        function readURL(input) {
-                                            if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
-                                                
-                                                reader.onload = function (e) {
-                                                    $('#profile-img-tag').attr('src', e.target.result);
-                                                }
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                        }
-                                        $("#profile-img").change(function(){
-                                            readURL(this);
-                                        });
-                                    </script><br>-->
+         <!--add image here-->
+              <div class="form-group">
+              <div class="form-row">
+                                <div class="col-md-6">
+                <label for="exampleConfirmPassword">Upload Image</label>
+                <input class="form-control" id="exampleConfirmPassword" name="file" type="file" placeholder="Upload Image">
+              </div>
+                  
+                  </div>
+              </div>
           </div>
           <button class="btn btn-primary btn-block" type="submit">Register</button>
         </form>

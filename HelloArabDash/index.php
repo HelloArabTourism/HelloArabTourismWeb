@@ -2,7 +2,6 @@
 session_start();
 require_once('connect.php');
 if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
-    /*$fname = $_SESSION['fname'];*/
     $email = $_SESSION['email'];
 }else{
     header('location: login.php');
@@ -92,7 +91,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
      <div class="row">
          <div class="col-md-12">
              <br>
-             <h1 class="text-center text-responsive">Welcome to Hello Arab Tourism System<br><?php echo $r['fname'];echo " "; echo $r['lname'];?> </h1><br>
+             <h1 class="text-center text-responsive text-primary">Welcome to Hello Arab Tourism System<br><?php echo $r['name'];?> </h1><br>
              <img class="rounded mx-auto d-block" src="../img/bg.png">
          </div>
          <br>

@@ -2,8 +2,8 @@
 session_start();
 require_once('connect.php');
 if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
-    echo "User Already Login";
-    echo $_SESSION['email'];
+
+     header('location: index.php');
 }
 if(isset($_POST) & !empty($_POST)){
 $email =mysqli_real_escape_string($connection, $_POST['email']);
@@ -16,7 +16,7 @@ $password = md5($_POST['password']);
         header('location: index.php');
 
     }else{
-        echo "User doesn't exist";
+    $fmsg="User doesn't exist";
     }
 
 }
@@ -45,6 +45,12 @@ $password = md5($_POST['password']);
 
 <body>
   <div class="container">
+         <?php if(isset($smsg)){?><div class="alert alert-success" role="alert">
+   <?php echo $smsg; ?>
+</div><?php } ?>
+<?php if(isset($fmsg)){?><div class="alert alert-danger" role="alert">
+   <?php echo $fmsg; ?>
+</div><?php } ?>
     <div class="card card-login mx-auto mt-5">
         
       <div class="card-header">
