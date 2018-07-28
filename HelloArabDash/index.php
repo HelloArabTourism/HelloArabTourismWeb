@@ -22,14 +22,15 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
   <title>Hello Arab Tourism</title>
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--Custom css-->
-    <link href="css/custom.css" rel="stylesheet">
+    
   <!-- Custom fonts for this template-->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+    <!--Custom css-->
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
@@ -81,27 +82,37 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
       </ul>
     </div>
   </nav>
+          <div class="content-wrapper">
   <section id="welcome">
+         <div class="container-fluid">
              <?php
     $sql = "SELECT * from `users` WHERE email='$email'";
     $res= mysqli_query($connection, $sql);
     $r = mysqli_fetch_assoc($res);
     ?>
-     <div class="container">
+    
      <div class="row">
          <div class="col-md-12">
+                          <div class="card text-center">
+    <div class="card-header success-color white-text">
+                     <h1 class="text-center text-responsive text-primary">Welcome to Hello Arab Tourism System </h1>
+
+    </div>
+    <div class="card-body">
+        <img alt="User Pic" src="<?php echo $r['img_location']; ?>" id="profileimage" class="img-circle img-responsive" height="200" width="200">
+        <h4 class="card-title"><?php echo $r['name'];?></h4>
+                <h4 class="card-text"><?php echo $r['email'];?></h4>
+        <a class="btn btn-primary btn-sm" href="profile.php">Manage Account</a>
+    </div>
+</div>
              <br>
-             <h1 class="text-center text-responsive text-primary">Welcome to Hello Arab Tourism System<br><?php echo $r['name'];?> </h1><br>
-             <img class="rounded mx-auto d-block" src="../img/bg.png">
          </div>
-         <br>
-
      </div>
- 
-
       </div>
-      
   </section>
+    </div>
+      
+
     
     <footer class="sticky-footer">
       <div class="container-fluid">
@@ -110,6 +121,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         </div>
       </div>
     </footer>
+    </div>
  
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

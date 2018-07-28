@@ -85,11 +85,15 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
     <?php
     $sql = "SELECT * from `users` WHERE email='$email'";
     $res= mysqli_query($connection, $sql);
-    $r = mysqli_fetch_assoc($res);
+    $r = mysqli_fetch_assoc($res);    
     ?>
+      <div class="content-wrapper">
+    <div class="container-fluid">
+
     
     
-    
+          </div>
+   
     
     
     <footer class="sticky-footer">
@@ -99,7 +103,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         </div>
       </div>
     </footer>
- 
+  </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

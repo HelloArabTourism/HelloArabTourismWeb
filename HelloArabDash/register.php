@@ -11,10 +11,20 @@ include('config.php');
 //Load Composer's autoloader
 
 if(isset($_POST) & !empty($_POST)){
-
-        $image = $_FILES['image']['tmp_name'];
-        echo $imgContent = addslashes(file_get_contents($image));
+$fileinfo=PATHINFO($_FILES["image"]["name"]);
+    $fileSize = $_FILES['image']['size'];
+    $fileError = $_FILES['image']['error'];
+    $fileType = $_FILES['image']['type'];
+        /*Allow File Extention*/
+    $allowed= array('jpg', 'jpge', 'png');
+	$newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
     
+            if($fileSize < 2000000){
+                	move_uploaded_file($_FILES["image"]["tmp_name"],"uploads/" . $newFilename);
+	$location="upload/" . $newFilename;
+            }else{
+                $fmsg="This image size is more than 2MB.";
+            }
 
     $name = mysqli_real_escape_string($connection, $_POST['name']);
     $email = mysqli_real_escape_string($connection, $_POST['email']);
@@ -31,10 +41,20 @@ if(isset($_POST) & !empty($_POST)){
             $fmsg .= "Email exisit in database. Please reset your password";
         }
             
-   
+   if (in_array($fileType,$allowed)){
+       if($fileSize < 2000){
+           
+           
+       }else{
+           $fmsg = "Your image is too large. Please upload file size less than 2MB!";
+       }
+       
+   }else{
+       $fmsg = "This file is not image. Please upload file with extention JPG, JPGE, PNG or GIF !";
+   }
         
         
-        $sql = "INSERT INTO `users`(`name`, `email`, `image`, `password`, `verification_key`) VALUES ('$name','$email', '$imgContent' ,'$password', '$verification_key')";
+        $sql = "INSERT INTO `users`(`name`, `email`, `img_location`, `password`, `verification_key`) VALUES ('$name','$email', '$location' ,'$password', '$verification_key')";
         $result = mysqli_query($connection, $sql);
         if($result){
            $smsg = "User Registared Successfully";
@@ -171,7 +191,7 @@ try {
               <div class="form-row">
                                 <div class="col-md-6">
                 <label for="exampleConfirmPassword">Upload Image</label>
-                <input class="form-control" id="exampleConfirmPassword" name="file" type="file" placeholder="Upload Image">
+                <input class="form-control" id="exampleConfirmPassword" name="image" type="file" placeholder="Upload Image">
               </div>
                   
                   </div>
