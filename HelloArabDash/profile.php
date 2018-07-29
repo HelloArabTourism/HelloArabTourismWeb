@@ -66,7 +66,13 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
           </a>
         </li>
       </ul>
-
+     <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
       <ul class="navbar-nav ml-auto">
         
 <li class="dropdown">
@@ -96,10 +102,10 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
    
     
     
-    <footer class="sticky-footer">
+      <footer class="sticky-footer">
       <div class="container-fluid">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>Copyright © Hello Arab Tourism 2018</small>
         </div>
       </div>
     </footer>

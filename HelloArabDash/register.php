@@ -206,6 +206,13 @@ try {
       </div>
     </div>
   </div>
+       <footer class="sticky-footer">
+      <div class="container-fluid">
+        <div class="text-center">
+          <small>Copyright © Hello Arab Tourism 2018</small>
+        </div>
+      </div>
+    </footer>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
