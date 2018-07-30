@@ -66,13 +66,13 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
           </a>
                     </li>
                 </ul>
-     <ul class="navbar-nav sidenav-toggler">
-        <li class="nav-item">
-          <a class="nav-link text-center" id="sidenavToggler">
+                <ul class="navbar-nav sidenav-toggler">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" id="sidenavToggler">
             <i class="fa fa-fw fa-angle-left"></i>
           </a>
-        </li>
-      </ul>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto">
 
                     <li class="dropdown">
@@ -91,10 +91,14 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <!--Start Design-->
         <div class="content-wrapper">
             <div class="container-fluid">
+
                 <!-- Example DataTables Card-->
                 <div class="card mb-3">
                     <div class="card-header">
-                        <i class="fa fa-table"></i>All Packages</div>
+                        <i class="fa fa-eye"></i> All Packages</div>
+
+                    <br> <i class="fa fa-search" aria-hidden="true"> <input type="text" name="search" placeholder=" Search"></i>
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -127,7 +131,6 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                             </table>
                         </div>
                     </div>
-                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
                 </div>
             </div>
 

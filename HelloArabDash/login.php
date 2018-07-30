@@ -13,10 +13,11 @@ $password = md5($_POST['password']);
     $count = mysqli_num_rows($result);
     if($count == 1){
        $_SESSION['email'] = $email;
+        
         header('location: index.php');
 
     }else{
-    $fmsg="User doesn't exist";
+    $fmsg="User doesn't exist or your account is not activate.";
     }
 
 }
