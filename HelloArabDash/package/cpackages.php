@@ -4,6 +4,55 @@ require_once('../connect.php');
 if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
     /*$fname = $_SESSION['fname'];*/
     $email = $_SESSION['email'];
+    if($email){
+    if(isset($_POST) && !empty($_POST)){
+        $fileinfo=PATHINFO($_FILES["image"]["name"]);
+    $fileSize = $_FILES['image']['size'];
+    $fileError = $_FILES['image']['error'];
+    $fileType = $_FILES['image']['type'];
+        /*Allow File Extention*/
+    $allowed= array('jpg', 'jpge', 'png');
+	$newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
+    
+            if($fileSize < 2000000){
+                	move_uploaded_file($_FILES["image"]["tmp_name"],"../upload/package/" . $newFilename);
+	$location="upload/" . $newFilename;
+            }else{
+                $fmsg="This image size is more than 2MB.";
+            }
+        $packageName =mysqli_real_escape_string($connection,$_POST['packageName']);
+        $price =mysqli_real_escape_string($connection, $_POST['price']);
+        $discount =mysqli_real_escape_string($connection, $_POST['discount']);
+        $date = date("Y/m/d");
+        $description = mysqli_real_escape_string($connection,$_POST['description']);
+        $addby = $email;
+        $includes = mysqli_real_escape_string($connection,$_POST['includes']);
+           if (in_array($fileType,$allowed)){
+       if($fileSize < 2000){
+           
+           
+       }else{
+           $fmsg = "Your image is too large. Please upload file size less than 2MB!";
+       }
+       
+   }else{
+       $fmsg = "This file is not image. Please upload file with extention JPG, JPGE, PNG or GIF !";
+   }
+        $sql = "insert into `packages`(`packageName`, `price`, `discount`,`includes`,`photo`, `date`, `description`, `active`,`addby`) VALUES ('$packageName','$price', '$discount', '$includes','$location','$date', '$description', '1', '$addby')";
+        $result= mysqli_query($connection, $sql);
+        if($result){
+             $smsg = "Package add successfully!";
+            
+        }else{
+             $fmsg = "Package details not uploaded.";
+        }
+           header('location:cpackages.php');
+        }
+    }
+    
+    
+    
+    
 }else{
     header('location: ../login.php');
 }
@@ -23,8 +72,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <title>Hello Arab Tourism</title>
         <!-- Bootstrap core CSS-->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!--Material Icons-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
 
 
         <!-- Custom fonts for this template-->
@@ -33,7 +81,6 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
         <!-- Custom styles for this template-->
         <link href="../css/sb-admin.css" rel="stylesheet">
-         <link href="../css/custom.css" rel="stylesheet">
     </head>
 
     <body class="fixed-nav sticky-footer" id="page-top">
@@ -94,42 +141,50 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         </nav>
         <!--Start Design-->
         <div class="content-wrapper">
-<!--
             <div class="container-fluid">
-                 Example DataTables Card
-                //<div class="card mb-3">
+                
+                <div class="card mb-3">
                     <div class="card-header">
                         <i class="fa fa-plus"></i> Add Package</div>
                 </div>
             </div>
             <div class="container">
+                <?php if(isset($smsg)){?><div class="alert alert-success" role="alert">
+   <?php echo $smsg; ?>
+</div><?php } ?>
+<?php if(isset($fmsg)){?><div class="alert alert-danger" role="alert">
+   <?php echo $fmsg; ?>
+</div><?php } ?>
                 <div class="row">
                     <div class="col-md-8">
-                        <form>
+                        <form method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="packageName" aria-describedby="emailHelp" placeholder="Package Name">
+                                <input type="text" class="form-control" id="packageName" aria-describedby="emailHelp" placeholder="Package Name" name="packageName" required>
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" id="price" placeholder="Price">
+                                <input type="number" class="form-control" id="price" placeholder="Price" name="price" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="discount" placeholder="Discount">
+                                <input type="text" class="form-control" id="discount" placeholder="Discount" name="discount" required>
                             </div>
                             <div class="form-group">
-                                <input type="date" class="form-control" id="startDate" placeholder="Start Date">
+                                <textarea class="form-control" id="description" rows="3" placeholder="Description" name="description" required></textarea>
+                            </div>
+                                                        <div class="form-group">
+<select multiple class="form-control selectpicker" name="includes">
+    <option name="airticket" value="airticket">Air Ticket</option>
+    <option name="visa" value="visa">Visa</option>
+    <option name="hotel" value="hotel">Hotel</option>
+    <option name="tourguide" value="tourguide">Tour Guide</option>
+</select>
+                            </div>
+                            <div class="form-group">
+                                <label for="uploadImages">Upload Tumbnail Image</label><br>
+                <input class="form-control" id="exampleConfirmPassword" name="image" type="file" placeholder="Upload Image">
                             </div>
 
 
-                            <div class="form-group">
-                                <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="uploadImages">Upload Images</label>
-                                <input type="file" class="form-control-file" id="imageUpload" aria-describedby="fileHelp">
-                            </div>
-
-
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" name="upload">Add Package</button>
                         </form>
 
 
@@ -140,56 +195,8 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                 </div>
 
             </div>
--->
-<div class="container">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-8"><h2>Package <b>Details</b></h2></div>
-                    <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add New</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-sm-12">
-                            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                         <th>Package Name</th>
-                                        <th>Package Price</th>
-                                        <th>Package Photos</th>
-                                        <th>Package Discount</th>
-                                        <th>Start date</th>
-                                        <th>Package Description</th>
-                                        <th>Package Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Abu Dhabi Package</td>
-                        <td>3000</td>
-                                                <td>Photo</td>
 
-                        <td>10%</td>
-                        <td>09/22/2018</td>
-                        <td>Abu Dhabi Package</td>
-                        <td>Active</td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                        </td>
-                    </tr>      
-                </tbody>
-            </table>
-                
-                </div>
-            </div>
-
-        </div>
-    </div>     
+    
             <footer class="sticky-footer">
                 <div class="container-fluid">
                     <div class="text-center">
@@ -213,7 +220,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <!-- Custom scripts for this page-->
         <script src="../js/sb-admin-datatables.min.js"></script>
         <script src="../js/sb-admin-charts.min.js"></script>
-                <script src="../js/custom.js"></script>
+               
 
 
     </body>

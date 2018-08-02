@@ -92,7 +92,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                   <section>
               
               <br><br>
-                          <div class="container-fluid">
+                           <div class="container-fluid">
                               <h1 class="text-center text-primary">Team</h1>
                 <br>
                 <div class="row justify-content-md-center">
@@ -112,7 +112,10 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             </a>
                         </div>
                     </div>
-                                       <div class="col-xl-4 col-sm-6 mb-3">
+                                       
+                </div>
+                      <div class="row justify-content-md-center">
+                          <div class="col-xl-4 col-sm-6 mb-3">
                         <div class="card text-white bg-success o-hidden h-100">
                             <div class="card-body">
                                 <div class="card-body-icon">
@@ -129,7 +132,8 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                         </div>
                     </div>
 
-                </div>
+                          
+                              </div>
                 
             </div>
               

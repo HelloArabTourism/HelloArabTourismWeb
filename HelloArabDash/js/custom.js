@@ -8,11 +8,14 @@ $(document).ready(function(){
         var row = '<tr>' +
             '<td><input type="text" class="form-control" name="name" id="name"></td>' +
             '<td><input type="number" class="form-control" name="price" id="price"></td>'+
-            '<td><input type="text" class="form-control" name="picture" id="picture"></td>'+
             '<td><input type="text" class="form-control" name="discount" id="discount"></td>'+
-            '<td><input type="date" class="form-control" name="startDate" id="startDate"></td>' +
+            '<td><input type="text" class="form-control" name="includes" id="includes"></td>'+
+            '<td><input type="text" class="form-control" name="picture" id="picture"></td>'+
             '<td><textarea type="text" class="form-control" name="phone" rows="3"></textarea></td>' +
+            '<td><input type="date" class="form-control" name="startDate" id="startDate"></td>' +
             '<td><input type="number" class="form-control" name="packageStatus" id="packageStatus"></td>'+
+                        '<td><input type="text" class="form-control" name="addby" id="addby"></td>'+
+
 			'<td>' + actions + '</td>' +
         '</tr>';
     	$("table").append(row);		

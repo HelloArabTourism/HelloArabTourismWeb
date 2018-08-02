@@ -4,6 +4,8 @@ require_once('../connect.php');
 if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
     /*$fname = $_SESSION['fname'];*/
     $email = $_SESSION['email'];
+    $result = mysqli_query($connection,"SELECT * FROM packages");
+
 }else{
     header('location: ../login.php');
 }
@@ -28,6 +30,8 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!-- Page level plugin CSS-->
         <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+        <!--Material Icons-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <!-- Custom styles for this template-->
         <link href="../css/sb-admin.css" rel="stylesheet">
     </head>
@@ -91,72 +95,68 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <!--Start Design-->
         <div class="content-wrapper">
             <div class="container-fluid">
+<div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Package Name</th>
+                                    <th>Package Price</th>
+                                    <th>Discount Price</th>
+                                    <th>Includes</th>
+                                    <th>Photo URL</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Add By</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                    while($row = mysqli_fetch_array($result))
+{
+                   echo "<tr>";
+                       echo " <td>".$row['packageName']."</td>";
+                        echo "<td>".$row['price']."</td>";
+                         echo " <td>".$row['discount']."</td>";
+                        echo "<td>".$row['includes']."</td>";
+                       echo " <td>"."<img  class='img-responsive' height='180' width='180' src=".$row['photo'].">"."</td>";
+                       echo " <td>".$row['description']."</td>";
+                        echo " <td>".$row['date']."</td>";
+                        echo " <td>".$row['active']."</td>";
+                        echo " <td>".$row['addby']."</td>";
 
-                <!-- Example DataTables Card-->
-                <div class="card mb-3">
-                    <div class="card-header">
-                        <i class="fa fa-eye"></i> All Packages</div>
+                  echo "  </tr> ";
+                    }?>
+                            </tbody>
+                        </table>
 
-                    <br> <i class="fa fa-search" aria-hidden="true"> <input type="text" name="search" placeholder=" Search"></i>
+                </div>
 
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Package Name</th>
-                                        <th>Package Price</th>
-                                        <th>Package Photos</th>
-                                        <th>Package Discount</th>
-                                        <th>Start date</th>
-                                        <th>Package Description</th>
-                                        <th>Package Status</th>
-
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>Bosnia and Herzegovina</td>
-                                        <td>3000</td>
-                                        <td>Photos</td>
-                                        <td>20%</td>
-                                        <td>2018/04/25</td>
-                                        <td>8 Day Plan</td>
-                                        <td>Active</td>
-
-                                    </tr>
-
-                                </tbody>
-                            </table>
+            </div>
+                <footer class="sticky-footer">
+                    <div class="container-fluid">
+                        <div class="text-center">
+                            <small>Copyright © Hello Arab Tourism 2018</small>
                         </div>
                     </div>
-                </div>
+                </footer>
             </div>
 
-            <footer class="sticky-footer">
-                <div class="container-fluid">
-                    <div class="text-center">
-                        <small>Copyright © Hello Arab Tourism 2018</small>
-                    </div>
-                </div>
-            </footer>
-        </div>
+            <!-- Bootstrap core JavaScript-->
+            <script src="../vendor/jquery/jquery.min.js"></script>
+            <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <!-- Core plugin JavaScript-->
+            <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+            <!-- Page level plugin JavaScript-->
+            <script src="../vendor/chart.js/Chart.min.js"></script>
+            <script src="../vendor/datatables/jquery.dataTables.js"></script>
+            <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+            <!-- Custom scripts for all pages-->
+            <script src="../js/sb-admin.min.js"></script>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <!-- Page level plugin JavaScript-->
-        <script src="vendor/chart.js/Chart.min.js"></script>
-        <script src="vendor/datatables/jquery.dataTables.js"></script>
-        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin.min.js"></script>
-        <!-- Custom scripts for this page-->
-        <script src="js/sb-admin-datatables.min.js"></script>
-        <script src="js/sb-admin-charts.min.js"></script>
+            <!-- Custom scripts for this page-->
+            <script src="../js/sb-admin-datatables.min.js"></script>
+            <script src="../js/sb-admin-charts.min.js"></script>
 
     </body>
 

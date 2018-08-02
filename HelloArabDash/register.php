@@ -20,7 +20,7 @@ $fileinfo=PATHINFO($_FILES["image"]["name"]);
 	$newFilename=$fileinfo['filename'] ."_". time() . "." . $fileinfo['extension'];
     
             if($fileSize < 2000000){
-                	move_uploaded_file($_FILES["image"]["tmp_name"],"uploads/" . $newFilename);
+                	move_uploaded_file($_FILES["image"]["tmp_name"],"upload/" . $newFilename);
 	$location="upload/" . $newFilename;
             }else{
                 $fmsg="This image size is more than 2MB.";

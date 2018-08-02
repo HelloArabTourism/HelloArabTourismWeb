@@ -136,8 +136,12 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
               </span>
             </a>
                         </div>
-                    </div>
-                                       <div class="col-xl-4 col-sm-6 mb-3">
+                    </div><br>
+
+
+                </div>
+                                              <div class="row justify-content-md-center">
+                                                                                         <div class="col-xl-4 col-sm-6 mb-3">
                         <div class="card text-white bg-success o-hidden h-100">
                             <div class="card-body">
                                 <div class="card-body-icon">
@@ -153,8 +157,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             </a>
                         </div>
                     </div>
-
-                </div>
+                              </div>
                 
             </div>
               </section>
@@ -182,7 +185,10 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             </a>
                         </div>
                     </div>
-                                       <div class="col-xl-4 col-sm-6 mb-3">
+                                       
+                </div>
+                      <div class="row justify-content-md-center">
+                          <div class="col-xl-4 col-sm-6 mb-3">
                         <div class="card text-white bg-success o-hidden h-100">
                             <div class="card-body">
                                 <div class="card-body-icon">
@@ -199,13 +205,160 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                         </div>
                     </div>
 
+                          
+                              </div>
+                
+            </div>
+              
+              </section>
+       <section>
+              
+              <br><br>
+                          <div class="container-fluid">
+                              <h1 class="text-center text-primary">Office Contact Details</h1>
+                <br>
+                <div class="row justify-content-md-center">
+                    <div class="col-xl-4 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-fw fa-plus"></i>
+                                </div>
+                                <div class="mr-5">Add Contact</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Click Here</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+                        </div>
+                    </div>
+                                       
                 </div>
+                      <div class="row justify-content-md-center">
+                          <div class="col-xl-4 col-sm-6 mb-3">
+                        <div class="card text-white bg-success o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-fw fa-eye"></i>
+                                </div>
+                                <div class="mr-5">View Contact</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Click Here</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+                        </div>
+                    </div>
+
+                          
+                              </div>
                 
             </div>
               
               </section>
       
+       <section>
+              
+              <br><br>
+                          <div class="container-fluid">
+                              <h1 class="text-center text-primary">Services Details</h1>
+                <br>
+                <div class="row justify-content-md-center">
+                    <div class="col-xl-4 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-fw fa-plus"></i>
+                                </div>
+                                <div class="mr-5">Add Services</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Click Here</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+                        </div>
+                    </div>
+                                       
+                </div>
+                      <div class="row justify-content-md-center">
+                          <div class="col-xl-4 col-sm-6 mb-3">
+                        <div class="card text-white bg-success o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-fw fa-eye"></i>
+                                </div>
+                                <div class="mr-5">View Services</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Click Here</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+                        </div>
+                    </div>
 
+                          
+                              </div>
+                
+            </div>
+              
+              </section>
+              <section>
+              
+              <br><br>
+                          <div class="container-fluid">
+                              <h1 class="text-center text-primary">About Us Details</h1>
+                <br>
+                <div class="row justify-content-md-center">
+                    <div class="col-xl-4 col-sm-6 mb-3">
+                        <div class="card text-white bg-primary o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-fw fa-plus"></i>
+                                </div>
+                                <div class="mr-5">Add About Us Details</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Click Here</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+                        </div>
+                    </div>
+                                       
+                </div>
+                      <div class="row justify-content-md-center">
+                          <div class="col-xl-4 col-sm-6 mb-3">
+                        <div class="card text-white bg-success o-hidden h-100">
+                            <div class="card-body">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-fw fa-eye"></i>
+                                </div>
+                                <div class="mr-5">View About Us Details</div>
+                            </div>
+                            <a class="card-footer text-white clearfix small z-1" href="#">
+              <span class="float-left">Click Here</span>
+              <span class="float-right">
+                <i class="fa fa-angle-right"></i>
+              </span>
+            </a>
+                        </div>
+                    </div>
+
+                          
+                              </div>
+                
+            </div>
+              
+              </section>
     
     <footer class="sticky-footer">
       <div class="container-fluid">

@@ -1,5 +1,5 @@
 .table-wrapper {
-		width: 700px;
+		width: 1500px;
 		margin: 30px auto;
         background: #fff;
         padding: 20px;	
@@ -65,7 +65,7 @@
         top: 3px;
     }    
     table.table .form-control {
-        height: 32px;
+        height: 50px;
         line-height: 32px;
         box-shadow: none;
         border-radius: 2px;
