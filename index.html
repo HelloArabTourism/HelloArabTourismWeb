@@ -28,7 +28,49 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+
+    <header>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+            <div class="container-fluid">
+
+                <div class="vesco-nav-wrapper">
+
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#vesco-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                       </button>
+
+                        <a class="navbar-brand" href="#home">
+                            <img src="#" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="vesco-menu">
+                        <ul class="nav navbar-nav">
+                            <li><a class="smooth-scroll" href="#home">Home</a></li>
+                            <li><a class="smooth-scroll" href="#services">Services</a></li>
+                            <li><a class="smooth-scroll" href="#about">About</a></li>
+                            <li><a class="smooth-scroll" href="#packages">Tour Packages</a></li>
+                            <li><a class="smooth-scroll" href="#activites">Tour Activites</a></li>
+                            <li><a class="smooth-scroll" href="#team">Team</a></li>
+                            <li><a class="smooth-scroll" href="#testimonials">Our Customers</a></li>
+                            <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                             </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
     <!--Home Section-->
     <section id="home">
         <!--set hero image-->
@@ -263,10 +305,10 @@
                             </a>
                         </div>
                     </div>
-                                <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
 
-                                    <a class="btn btn-lg btn-general btn-blue" href="#packages" role="button">All Packages</a>
-                                </div>
+                        <a class="btn btn-lg btn-general btn-blue" href="#packages" role="button">All Packages</a>
+                    </div>
                 </div>
 
             </div>
@@ -471,175 +513,245 @@
         </div>
 
     </section>
-    
-    
-  
-  <section id="contact">
-          <!-- Start contact Area -->
-  <div class="contact-area">
-    <div class="contact-inner area-padding">
-      <div class="contact-overly"></div>
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                <h3> Contact Us </h3>
-                <div class="content-title-underline"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Start contact icon column -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="contact-icon text-center">
-              <div class="single-icon">
-                <i class="fas fa-mobile"></i>
-                <p>
-                  Call: +971 554 55499 54<br>
-                  <span>Saturday-Thursday (9am-5pm)</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Start contact icon column -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="contact-icon text-center">
-              <div class="single-icon">
-                <i class="fas fa-envelope-open"></i>
-                <p>
-                  Email: info@helloarabtourism.com<br>
-                  <span>Web: www.helloarabtourism.com</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Start contact icon column -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="contact-icon text-center">
-              <div class="single-icon">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>
-                  Location: 315 Zayed The First St<br>
-                  <span>Abu Dhabi 136046, UAE</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
+    <!-- Testimonials -->
+    <section id="testimonials">
 
-          <!-- Start Google Map -->
-          <div class="col-md-6 col-sm-6 col-xs-12">
-              <div id="map-container-2" class="z-depth-1" style="height: 500px"></div>
-            <!-- Start Map -->
-<!--
+        <div id="testimonials-cover" class="bg-parallax">
+            <div class="content-box">
+                <div class="content-title content-title-white wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3> What Our Customers Say </h3>
+                    <div class="content-title-underline"></div>
+                </div>
+
+                <div class="container">
+
+                    <div class="row wow animated bounceInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="col-md-12">
+
+                            <div id="customers-testimonials" class="text-center owl-carousel owl-theme">
+
+                                <div class="testimonial">
+                                    <img src="img/client/client-1.jpg" class="img-responsive img-circle" alt="testimonial">
+                                    <blockquote class="text-center">
+                                        <p>De cernantur concursionibus do incididunt fore nostrud, quibusdam anim quorum ubi quae id aute sed eiusmod ita fore et expetendis irure dolore te legam e do an efflorescere, voluptate quo.</p>
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <p>
+                                            <strong> Daniel Watrous </strong>
+                                            <span> CEO & Founder - Google </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial">
+                                    <img src="img/client/client-2.jpg" class="img-responsive img-circle" alt="client" />
+                                    <blockquote class="text-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pulvinar augue. Ut feugiat viverra pellentesque. Integer scelerisque malesuada orci in cursus. Fusce pellentesque urna quis risus rutrum, vitae blandit urna pharetra. Praesent nunc enim, pharetra sed erat nec.</p>
+                                    </blockquote>
+
+                                    <div class="testimonial-author">
+                                        <p>
+                                            <strong>Johan Mathew</strong>
+                                            <span>CEO & Founder - Yahoo</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="testimonial">
+                                    <img src="img/client/client-3.jpg" class="img-responsive img-circle" alt="client" />
+                                    <blockquote class="text-center">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pulvinar augue. Ut feugiat viverra pellentesque. Integer scelerisque malesuada orci in cursus. Fusce pellentesque urna quis risus rutrum, vitae blandit urna pharetra. Praesent nunc enim, pharetra sed erat nec.</p>
+                                    </blockquote>
+
+                                    <div class="testimonial-author">
+                                        <p>
+                                            <strong>Sara Smith</strong>
+                                            <span>CEO &amp; Founder - Amazon</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Content Box -->
+        </div>
+    </section>
+
+
+
+    <section id="contact">
+        <!-- Start contact Area -->
+        <div class="contact-area">
+            <div class="contact-inner area-padding">
+                <div class="contact-overly"></div>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                <h3> Contact Us </h3>
+                                <div class="content-title-underline"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Start contact icon column -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fas fa-mobile"></i>
+                                    <p>
+                                        Call: +971 554 55499 54<br>
+                                        <span>Saturday-Thursday (9am-5pm)</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Start contact icon column -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fas fa-envelope-open"></i>
+                                    <p>
+                                        Email: info@helloarabtourism.com<br>
+                                        <span>Web: www.helloarabtourism.com</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Start contact icon column -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="contact-icon text-center">
+                                <div class="single-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>
+                                        Location: 315 Zayed The First St<br>
+                                        <span>Abu Dhabi 136046, UAE</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <!-- Start Google Map -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div id="map-container-2" class="z-depth-1" style="height: 500px"></div>
+                            <!-- Start Map -->
+                            <!--
               <div id="google-map" data-latitude="24.470070" data-longitude="54.342266"></div>
 -->
-            <!-- End Map -->
-          </div>
-          <!-- End Google Map -->
+                            <!-- End Map -->
+                        </div>
+                        <!-- End Google Map -->
 
-          <!-- Start  contact -->
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="form contact-form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
+                        <!-- Start  contact -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form contact-form">
+                                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                                <div id="errormessage"></div>
+                                <form action="" method="post" role="form" class="contactForm">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                        <div class="validation"></div>
+                                    </div>
+                                    <div class="text-center"><button type="submit">Send Message</button></div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Left contact -->
+                    </div>
                 </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
             </div>
-          </div>
-          <!-- End Left contact -->
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Contact Area -->
+        <!-- End Contact Area -->
 
-  <!-- Start Footer bottom Area -->
-  <footer>
-    <div class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                <div class="footer-logo">
-                  <h2>Hello Arab Tourism</h2>
-                </div>
+        <!-- Start Footer bottom Area -->
+        <footer>
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="footer-content">
+                                <div class="footer-head">
+                                    <div class="footer-logo">
+                                        <h2>Hello Arab Tourism</h2>
+                                    </div>
 
-                <p>Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide our services in beautiful capital of United Arab Emirates Abu Dhabi city Arabic culture and modern skyscrapers and also in Bosnia &Herzegovina.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="https://www.facebook.com/HelloArabTourism" target="_blank"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/helloarabtours" target="_blank"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="https://www.snapchat.com/helloarabtours" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/helloarabtourism/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </li>
-                   <li>
-                      <a href="https://www.linkedin.com/company/helloarabtourism/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </li>
-                       <li>
-                      <a href="https://wa.me/+971554554994" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </li>
-                  </ul>
+                                    <p>Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide our services in beautiful capital of United Arab Emirates Abu Dhabi city Arabic culture and modern skyscrapers and also in Bosnia &amp; Herzegovina.</p>
+                                    <div class="footer-icons">
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.facebook.com/HelloArabTourism" target="_blank"><i class="fab fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com/helloarabtours" target="_blank"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.snapchat.com/helloarabtours" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/helloarabtourism/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.linkedin.com/company/helloarabtourism/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://wa.me/+971554554994" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end single footer -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="footer-content">
+                                <div class="footer-head">
+                                    <h4>information</h4>
+                                    <p>
+                                        Follow us on social media or contact us because we are here to make your travel remarkable.
+                                    </p>
+                                    <div class="footer-contacts">
+                                        <p><span>Tel:</span> +123 456 789</p>
+                                        <p><span>Email:</span> info@helloarabtourism.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end single footer -->
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>information</h4>
-                <p>
-                  Follow us on social media or contact us because we are here to make your travel remarkable.
-                </p>
-                <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          </div>
-          </div>
-          </div>
-          </footer>
-  </section>
+        </footer>
+    </section>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
-      <div class="container">
-      <p class="m-0 text-white text-center">Copyright &copy; Hello Arab Tourism 2018</p>
-     
-      </div>
-      <!-- /.container -->
+        <div class="container">
+            <p class="m-0 text-white text-center">Copyright &copy; Hello Arab Tourism 2018</p>
+
+        </div>
+        <!-- /.container -->
     </footer>
 
     <!--JQuery file-->
@@ -653,10 +765,11 @@
     <!--Owl Carousel JS-->
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
     <!--Google Map-->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAot2fgi5npA_GhLlOr4-YAd4MQlSPp_yk"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAot2fgi5npA_GhLlOr4-YAd4MQlSPp_yk"></script>
     <script src="js/map/map.js"></script>
     <!--Add Custom Js and JQuery-->
     <script src="js/custom.js"></script>
+    <!--easing Jquery-->
 
 </body>
 
