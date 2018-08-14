@@ -68,6 +68,10 @@ h3 {
 }
 
 
+.searchbox #searchbox-heading h5 {
+        color: #fff;
+
+}
 /*====================================================
                         PARALLAX (Generic)
 ======================================================*/
@@ -288,6 +292,10 @@ Packages Section
 #packages-btn{
     float: none;
 }
+
+
+
+
 /*====================================
 Activites Section
 =====================================*/
@@ -716,5 +724,21 @@ Social Icons
 .credits {
   padding-top: 5px;
   text-align: center;
+}
+
+/*=== OPTIN ===*/
+#optin {
+    background: #3e4249;
+    padding: 20px 0;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1.2em;
+
+}
+
+#optin p {
+    margin: 7px 0 0 0;
+    color: white;
 }
 
