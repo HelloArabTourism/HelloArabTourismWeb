@@ -69,6 +69,18 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             <span class="nav-link-text">Team</span>
           </a>
                     </li>
+                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Team">
+          <a class="nav-link" href="booking.php">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Booking</span>
+          </a>
+        </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Team">
+          <a class="nav-link" href="booking.php">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Booking</span>
+          </a>
+        </li>
                 </ul>
                 <ul class="navbar-nav sidenav-toggler">
                     <li class="nav-item">
@@ -119,7 +131,8 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                         echo "<td>".$row['price']."</td>";
                          echo " <td>".$row['discount']."</td>";
                         echo "<td>".$row['includes']."</td>";
-                       echo " <td>"."<img  class='img-responsive' height='180' width='180' src=".$row['photo'].">"."</td>";
+                      /* echo " <td>"."<img  class='img-responsive' height='180' width='180' src=".$row['photo'].">"."</td>"*/;
+                       echo " <td>"."<a href='".$row['photo']."'>View Photo</a>"."</td>";
                        echo " <td>".$row['description']."</td>";
                         echo " <td>".$row['date']."</td>";
                         echo " <td>".$row['active']."</td>";

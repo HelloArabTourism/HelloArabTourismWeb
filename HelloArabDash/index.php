@@ -66,6 +66,12 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             <span class="nav-link-text">Team</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Team">
+          <a class="nav-link" href="booking.php">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Booking</span>
+          </a>
+        </li>
       </ul>
      <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

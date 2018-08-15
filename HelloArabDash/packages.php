@@ -31,6 +31,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
         <!-- Custom styles for this template-->
         <link href="css/sb-admin.css" rel="stylesheet">
+        
     </head>
 
     <body class="fixed-nav sticky-footer" id="page-top">
@@ -66,14 +67,20 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             <span class="nav-link-text">Team</span>
           </a>
                     </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Team">
+                        <a class="nav-link" href="booking.php">
+            <i class="fa fa-fw fa-file"></i>
+            <span class="nav-link-text">Booking</span>
+          </a>
+                    </li>
                 </ul>
-     <ul class="navbar-nav sidenav-toggler">
-        <li class="nav-item">
-          <a class="nav-link text-center" id="sidenavToggler">
+                <ul class="navbar-nav sidenav-toggler">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" id="sidenavToggler">
             <i class="fa fa-fw fa-angle-left"></i>
           </a>
-        </li>
-      </ul>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto">
 
                     <li class="dropdown">
@@ -92,8 +99,8 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         <!--Start Design-->
         <div class="content-wrapper">
 
-                                                   <div class="container-fluid">
-                              <h1 class="text-center text-primary">Packages</h1>
+            <div class="container-fluid">
+                <h1 class="text-center text-primary">Packages</h1>
                 <br>
                 <div class="row justify-content-md-center">
                     <div class="col-xl-4 col-sm-6 mb-3">
@@ -115,8 +122,8 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
 
 
                 </div>
-                                              <div class="row justify-content-md-center">
-                                                                                         <div class="col-xl-4 col-sm-6 mb-3">
+                <div class="row justify-content-md-center">
+                    <div class="col-xl-4 col-sm-6 mb-3">
                         <div class="card text-white bg-success o-hidden h-100">
                             <div class="card-body">
                                 <div class="card-body-icon">
@@ -132,16 +139,16 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
             </a>
                         </div>
                     </div>
-                              </div>
-                
+                </div>
+
             </div>
-               <footer class="sticky-footer">
-      <div class="container-fluid">
-        <div class="text-center">
-          <small>Copyright © Hello Arab Tourism 2018</small>
-        </div>
-      </div>
-    </footer>
+            <footer class="sticky-footer">
+                <div class="container-fluid">
+                    <div class="text-center">
+                        <small>Copyright © Hello Arab Tourism 2018</small>
+                    </div>
+                </div>
+            </footer>
         </div>
 
         <!-- Bootstrap core JavaScript-->
