@@ -56,8 +56,8 @@
                             <li><a class="smooth-scroll" href="#home">Home</a></li>
                             <li><a class="smooth-scroll" href="#about">About Us</a></li>
                             <li><a class="smooth-scroll" href="#packages">Packages</a></li>
-                            <li><a class="smooth-scroll" href="abudhabi.html">Hello Abu Dhabi</a></li>
-                            <li><a class="smooth-scroll" href="bosnia.html">Hello Bosnia</a></li>
+                            <li><a class="smooth-scroll" href="abudhabi.php">Hello Abu Dhabi</a></li>
+                            <li><a class="smooth-scroll" href="bosnia.php">Hello Bosnia</a></li>
 <li><a class="smooth-scroll" href="#services">Our Services</a></li>
 
                             <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
@@ -108,9 +108,9 @@
                         </div>
                     </form>  
                         </div>
-
+<br>
                     <div id="home-btn" class="animated zoomIn">
-                        <a class="btn btn-lg .btn-general btn-white" href="#packages" role="button" title="Our Packages">Our Packages</a>
+                        <a class="btn btn-lg .btn-general btn-white smooth-scroll" href="#packages" role="button" title="Our Packages">Our Packages</a>
 
                     </div>
 
@@ -262,7 +262,7 @@
                                 </div>
                                 <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
 
-                                    <a class="btn btn-lg  btn-general btn-blue" href="#" role="button">Our Packages</a>
+                                    <a class="btn btn-lg  btn-general btn-blue" href="about.php" role="button">More Details</a>
                                 </div>
 
 
@@ -293,272 +293,51 @@
 
             <div class="container-fluid">
 
-                <div class="row no-gutters wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                     <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/1.jpg" title="package 1">
+                            <a href="uaePackage.php">
                                 <img src="img/packages/1.jpg" class="img-responsive" alt="Work">
-                            </a>
-                        </div>
+                                
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/uaePackage.php" role="button">All Packages</a>
+
                     </div>
                     <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/2.jpg" title="package 2">
+                            <a href="bosniaPackage.php">
                                 <img src="img/packages/2.jpg" class="img-responsive" alt="Work">
-                            </a>
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/bosniaPackage.php" role="button">All Packages</a>
+                                                    
+
                         </div>
-                    </div>
+                    
                     <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/3.jpg" title="package 3">
+                        
+                            <a href="georgiaPackage.php">
                                 <img src="img/packages/3.jpg" class="img-responsive" alt="Work">
-                            </a>
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/georgiaPackage.php" role="button">All Packages</a>
+
                         </div>
-                    </div>
                     <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/4.jpg" title="package 4">
+                            <a href="azerbaijanPackage.php">
                                 <img src="img/packages/4.jpg" class="img-responsive" alt="Work">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/5.jpg" title="package 5">
-                                <img src="img/packages/5.jpg" class="img-responsive" alt="Work">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/6.jpg" title="package 6">
-                                <img src="img/packages/6.jpg" class="img-responsive" alt="Work">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/7.jpg" title="package 7">
-                                <img src="img/packages/7.jpg" class="img-responsive" alt="Work">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                        <div class="img-wrapper">
-                            <a href="img/packages/8.jpg" title="package 8">
-                                <img src="img/packages/8.jpg" class="img-responsive" alt="Work">
-                            </a>
-                        </div>
-                    </div>
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/azerbaijanPackage.php" role="button">All Packages</a>
 
-                    <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-
-                        <a class="btn btn-lg btn-general btn-blue " href="#packages" role="button">All Packages</a>
-                    </div>
+                        </div>
                 </div>
+                   <!-- <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
 
+                        <a class="btn btn-lg btn-general btn-blue " href="packages.php" role="button">All Packages</a>
+                    </div>-->
             </div>
         </div>
         <!-- End Content Box -->
     </section>
 
-    <!--Activites Section-->
-    <section id="activites">
+   
 
-        <div class="content-box">
-            <div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                <h3> Activites </h3>
-                <div class="content-title-underline">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div>
-                <a class="btn btn-md btn-general btn-blue filter-button" role="button" data-filter="all">All</a>
-                <a class="btn btn-md btn-general btn-blue filter-button" role="button" data-filter="sd">Sky Diving</a>
-                <a class="btn btn-md btn-general btn-blue filter-button" role="button" data-filter="hicking">Hiking</a>
-                <a class="btn btn-md btn-general btn-blue filter-button" role="button" data-filter="beach">Beach</a>
-
-                <br/>
-            </div>
-
-
-            <div class="row no-gutters wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                <div class="col-md-3 filter sd">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/1.jpg" />
-                        <div class="cap1">
-                            <h3>Sky Diving</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3 filter hicking">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/3.jpg" />
-                        <div class="cap1">
-                            <h3>Activity 2</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 filter beach">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/7.jpg" />
-                        <div class="cap1">
-                            <h3>Activity 3</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 filter sd">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/2.jpg" />
-                        <div class="cap1">
-                            <h3>Activity 4</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 filter hicking">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/4.jpg" />
-                        <div class="cap1">
-                            <h3>Activity 5</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 filter sd">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/2.jpg" />
-                        <div class="cap1">
-                            <h3>Activity 6</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 filter hicking">
-                    <div class="each-item">
-                        <img class="port-image" src="img/activites/5.jpg" />
-                        <div class="cap1">
-                            <h3>Activity 6</h3>
-                            <p>Loremdsfdsfsdfdsfdsfsdfsdfsdf</p>
-                        </div>
-                        <div class="cap2">
-                            <p class="text-center">Visit</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Team Section-->
-    <section id="team">
-
-        <div class="content-box">
-            <div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                <h3> Our Team </h3>
-                <div class="content-title-underline">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                <div class="col-md-12">
-                    <div id="team-members" class="owl-carousel owl-theme">
-
-                        <div class="team-member">
-                            <!--Single Team Member-->
-                            <img src="img/team/1.PNG" class="img-responsive" alt="team-member">
-                            <div class="team-member-info text-center">
-                                <h4 class="team-member-name">Mohamed Al Hashmi</h4>
-                                <h4 class="team-member-designation">CEO</h4>
-                                <ul class="social-list">
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-twitter"></i></a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <!--Single Team Member-->
-                            <img src="img/team/1.PNG" class="img-responsive" alt="team-member">
-                            <div class="team-member-info text-center">
-                                <h4 class="team-member-name">Majed Al Hashmi</h4>
-                                <h4 class="team-member-designation">General Manager</h4>
-                                <ul class="social-list">
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-twitter"></i></a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <!--Single Team Member-->
-                            <img src="img/team/1.PNG" class="img-responsive" alt="team-member">
-                            <div class="team-member-info text-center">
-                                <h4 class="team-member-name">Ghassan Al Attas</h4>
-                                <h4 class="team-member-designation">Regional Manager</h4>
-                                <ul class="social-list">
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-twitter"></i></a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-member">
-                            <!--Single Team Member-->
-                            <img src="img/team/1.PNG" class="img-responsive" alt="team-member">
-                            <div class="team-member-info text-center">
-                                <h4 class="team-member-name">Salman Shabbir</h4>
-                                <h4 class="team-member-designation">Marketing & IT Manager</h4>
-                                <ul class="social-list">
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#" class="social-icon icon-gray"><i class="fab fa-twitter"></i></a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-    </section>
     <!-- Testimonials -->
     <section id="testimonials">
 

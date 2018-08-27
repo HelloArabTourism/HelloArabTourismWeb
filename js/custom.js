@@ -11,23 +11,23 @@ $(function () {
 packages
 ====================================*/
 /*activation code for magnific popup*/
-$(function () {
+/*$(function () {
     $("#packages").magnificPopup({
         delegate: 'a', //child items selector, by clicking on it popup will open
         type: 'image',
         // other options
-        /*Gallary object*/
+        //Gallary object
         gallery: {
             enabled: true
         }
 
     });
 
-});
+});*/
 
 /*====================================
 Activites
-======================================*/
+======================================
 $(".filter-button").click(function () {
     var value = $(this).attr('data-filter');
 
@@ -41,7 +41,7 @@ $(".filter-button").click(function () {
         $('.filter').filter('.' + value).show('3000');
 
     }
-});
+});*/
 
 /*====================================
 Team
