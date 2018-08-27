@@ -290,7 +290,9 @@
         </div>
         <!-- /.container -->
     </footer>
-
+<a href="#packages" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
     <!--JQuery file-->
     <script src="../js/jquery-3.3.1.min.js"></script>
     <!--bootstrap JS-->

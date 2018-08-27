@@ -85,7 +85,11 @@
                 <div id="home-content-box-inner-about" class="text-center">
                     <div id="home-heading" class="animated zoomIn">
                         <h3>Hello Arab Tourism <br> About Us</h3>
+                        
                     </div>
+                    <a href="#services" id="top-to-back" class="btn btn-sm btn-blue btn-top-to-back smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+            <i class="fa fa-angle-down"></i>
+        </a>
                 </div>
             </div>
         </div>
@@ -359,7 +363,9 @@
         </div>
         <!-- /.container -->
     </footer>
-
+<a href="#home-about" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
     <!--JQuery file-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!--bootstrap JS-->

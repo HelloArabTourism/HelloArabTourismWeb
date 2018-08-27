@@ -157,6 +157,15 @@ h3 {
     display: none;
 }
 
+.btn-top-to-back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    padding: 3px 15px;
+    border-radius: 0;
+}
+
 
 /*====================================================
                        ANIMATE
@@ -765,10 +774,10 @@ Social Icons
     padding: 14px 2px;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .vesco-top-nav {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
     
 }
 
@@ -815,4 +824,27 @@ Social Icons
 
 .vesco-top-nav ul.navbar-nav>li.active>a {
     color: #34c6d3;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    height: 80px; // Logo will not overhang
+  }
+  #LC-navbar {
+    background-color: #ccc; // Change background color
+  }
+  .navbar-toggle {
+    margin-top: 15px; // Adjust toggle position
+  }
+}
+@media (max-width:568px){
+     .navbar-brand {
+    height: 50px; // Logo will not overhang
+  }
+  #LC-navbar {
+    background-color: #ccc; // Change background color
+  }
+  .navbar-toggle {
+    margin-top: 25px; // Adjust toggle position
+  } 
 }
