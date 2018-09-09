@@ -74,6 +74,7 @@
 
     </header>
 <br>
+
       <!-- Packages Section -->
     <section id="packages">
 
@@ -85,10 +86,22 @@
 
             <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                                   <div class="col-md-2">
+                        <a class="weatherwidget-io" href="https://forecast7.com/en/24d4554d38/abu-dhabi/" data-label_1="ABU DHABI" data-label_2="United Arab Emirates" data-theme="weather_one" >ABU DHABI United Arab Emirates</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                    </div>
+                <div class="col-md-7">
                     <img class="center-block" src="../img/Coming-soon.png" alt="Coming Soon">
                 </div>
             </div>
+                
+            </div>
+            <div class="cointainer">
+                <div class="row">
+
+                </div>
             </div>
         </div>
     </section>
@@ -309,6 +322,11 @@
     <script src="../js/custom.js"></script>
     <!--easing Jquery-->
     <script src="../js/easing/jquery.easing.1.3.js"></script>
+    
+
+<script type="text/javascript">
+TranslateIt.init();
+    </script>
 </body>
 
 </html>

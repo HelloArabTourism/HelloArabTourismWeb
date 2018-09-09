@@ -1,7 +1,27 @@
+<?php
+require_once('requires/contact_require.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-P7PNZ6M':true});</script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125060512-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ga('require', 'GTM-P7PNZ6M');
+  gtag('config', 'UA-125060512-1');
+</script>
+
     <!--Required meta tags-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,6 +80,7 @@
                             <li><a class="smooth-scroll" href="#services">Our Services</a></li>
 
                             <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
+                            <li><a class="smooth-scroll" href="#contact">Plan Your Trip</a></li>
 
 
                         </ul>
@@ -433,7 +454,7 @@
                                 <div class="single-icon">
                                     <i class="fas fa-mobile"></i>
                                     <p>
-                                        Call: +971 554 55499 54<br>
+                                        Call: <?php echo $phone;?><br>
                                         <span>Saturday-Thursday</span>
                                     </p>
                                 </div>
@@ -445,8 +466,8 @@
                                 <div class="single-icon">
                                     <i class="fas fa-envelope-open"></i>
                                     <p>
-                                        Email: info@helloarabtourism.com<br>
-                                        <span>Web: www.helloarabtourism.com</span>
+                                        Email: <?php echo $email;?><br>
+                                        <span>Web: <?php echo $web;?></span>
                                     </p>
                                 </div>
                             </div>
@@ -457,8 +478,7 @@
                                 <div class="single-icon">
                                     <i class="fas fa-map-marker-alt"></i>
                                     <p>
-                                        Location: Al Ahalia Tower Block-A M Floor Office A7 Al Khalidiya - 315 Zayed The First St<br>
-                                        <span>Abu Dhabi 136046, UAE</span>
+                                        Location: <?php echo $location;?>
                                     </p>
                                 </div>
                             </div>
@@ -532,22 +552,22 @@
                                     <div class="footer-icons">
                                         <ul>
                                             <li>
-                                                <a href="https://www.facebook.com/HelloArabTourism" target="_blank"><i class="fab fa-facebook"></i></a>
+                                                <a href="<?php echo $fbURL;?>" target="_blank"><i class="fab fa-facebook"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://twitter.com/helloarabtours" target="_blank"><i class="fab fa-twitter"></i></a>
+                                                <a href="<?php echo $twURL;?>" target="_blank"><i class="fab fa-twitter"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.snapchat.com/helloarabtours" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                                                <a href="<?php echo $snpURL;?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.instagram.com/helloarabtourism/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                                <a href="<?php echo $instaURL;?>" target="_blank"><i class="fab fa-instagram"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/company/helloarabtourism/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                                <a href="<?php echo $linkURL;?>" target="_blank"><i class="fab fa-linkedin"></i></a>
                                             </li>
                                             <li>
-                                                <a href="https://wa.me/+971554554994" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                                <a href="<?php echo $waURL;?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -563,12 +583,13 @@
                                         Follow us on social media or contact us because we are here to make your travel remarkable.
                                     </p>
                                     <div class="footer-contacts">
-                                        <p><span>Tel:</span> +971554554994</p>
-                                        <p><span>Email:</span> info@helloarabtourism.com</p>
+                                        <p><span>Tel:</span> <?php echo $phone;?></p>
+                                        <p><span>Email:</span> <?php echo $email;?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                       
                         <!-- end single footer -->
                     </div>
                 </div>
@@ -643,7 +664,7 @@
     <!--Owl Carousel JS-->
     <script src="js/owl-carousel/owl.carousel.min.js"></script>
     <!--Google Map-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAot2fgi5npA_GhLlOr4-YAd4MQlSPp_yk"></script>
+    <script src="<?php echo $mapURL;?>"></script>
     <script src="js/map/map.js"></script>
     <!--Add Custom Js and JQuery-->
     <script src="js/custom.js"></script>

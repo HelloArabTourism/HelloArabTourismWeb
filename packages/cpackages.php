@@ -21,12 +21,20 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                 $fmsg="This image size is more than 2MB.";
             }
         $packageName =mysqli_real_escape_string($connection,$_POST['packageName']);
+        $packageDes =mysqli_real_escape_string($connection,$_POST['packageDes']);
+        $tourDuration =mysqli_real_escape_string($connection, $_POST['tourDuration']);
+$nPerson =mysqli_real_escape_string($connection, $_POST['nPerson']);
         $price =mysqli_real_escape_string($connection, $_POST['price']);
-        $discount =mysqli_real_escape_string($connection, $_POST['discount']);
-        $date = date("Y/m/d");
+        $sDate =mysqli_real_escape_string($connection, $_POST['sDate']);
+        $eDate = mysqli_real_escape_string($connection, $_POST['eDate']);
+        $includes = mysqli_real_escape_string($connection, $_POST['includes']);
+        $chk = "";
+        foreach($includes as $inc){
+            $chk .= $inc.","; 
+        }
+
         $description = mysqli_real_escape_string($connection,$_POST['description']);
         $addby = $email;
-        $includes = mysqli_real_escape_string($connection,$_POST['includes']);
            if (in_array($fileType,$allowed)){
        if($fileSize < 2000){
            
@@ -38,7 +46,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
    }else{
        $fmsg = "This file is not image. Please upload file with extention JPG, JPGE, PNG or GIF !";
    }
-        $sql = "insert into `packages`(`packageName`, `price`, `discount`,`includes`,`photo`, `date`, `description`, `active`,`addby`) VALUES ('$packageName','$price', '$discount', '$includes','$location','$date', '$description', '1', '$addby')";
+        $sql = "insert into `packages`(`packageName`, `packageDes`, `tourDuration`,`nPerson`,`price`, `sDate`,`eDate`, `includes`, `photo`, `description`, `active`,`addby`) VALUES ('$packageName','$packageDes', '$tourDuration', '$nPerson','$price','$sDate', '$eDate', '$includes', '$location', '$description', '1', '$addby')";
         $result= mysqli_query($connection, $sql);
         if($result){
              $smsg = "Package add successfully!";
@@ -167,28 +175,66 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                             <div class="form-group">
                                 <input type="text" class="form-control" id="packageName" aria-describedby="emailHelp" placeholder="Package Name" name="packageName" required>
                             </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control" id="price" placeholder="Price" name="price" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="discount" placeholder="Discount" name="discount" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id="description" rows="3" placeholder="Description" name="description" required></textarea>
+                                                        <div class="form-group">
+                                <input type="text" class="form-control" id="packageDes" aria-describedby="emailHelp" placeholder="Package Destination" name="packageDes" required>
                             </div>
                                                         <div class="form-group">
-<select multiple class="form-control selectpicker" name="includes">
-    <option name="airticket" value="airticket">Air Ticket</option>
-    <option name="visa" value="visa">Visa</option>
-    <option name="hotel" value="hotel">Hotel</option>
-    <option name="tourguide" value="tourguide">Tour Guide</option>
-</select>
+                                <input type="text" class="form-control" id="tourDuration" aria-describedby="emailHelp" placeholder="Tour Duration" name="tourDuration" required>
                             </div>
                             <div class="form-group">
-                                <label for="uploadImages">Upload Tumbnail Image</label><br>
+                                <input type="number" class="form-control" id="nPerson" aria-describedby="emailHelp" placeholder="Number of Person" name="nPerson" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="price" placeholder="Price Per Person" name="price" required>
+                            </div>
+                        <div class="form-group">
+                            <div class="form-check-inline">
+                                <label><strong>Start Date: </strong></label>&nbsp;
+                            <input type="date" class="form-control" id="sDate" name="sDate">
+                            &nbsp; &nbsp;
+                                <label><strong>End Date: </strong></label>&nbsp;
+                            <input type="date" class="form-control" id="eDate" name="eDate">
+                            </div>
+                        </div>
+
+
+                            <div class="form-group">
+                            <label for="packageInclude"><strong>Package Include</strong></label><br>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="" name="includes[]">Air Ticket
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="" name="includes[]">Hotel
+  </label>
+</div>
+<div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="" name="includes[]">Airport Transport
+  </label>
+</div>
+ <div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="" name="includes[]">Car
+  </label>
+</div>
+ <div class="form-check-inline">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" value="" name="includes[]">City Tour
+  </label>
+</div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="uploadImages"><strong>Upload Tumbnail Image</strong></label><br>
                 <input class="form-control" id="exampleConfirmPassword" name="image" type="file" placeholder="Upload Image">
                             </div>
-
+                            <div class="form-group">
+                                <textarea class="form-control" id="description" rows="3" placeholder="Package Details" name="description" required></textarea>
+                            </div>
 
                             <button type="submit" class="btn btn-primary" name="upload">Add Package</button>
                         </form>
