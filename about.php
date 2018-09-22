@@ -1,9 +1,5 @@
 <?php
-require_once('requires/contact_require.php');
-
- $sql = "SELECT * from `about_us`";
-    $res= mysqli_query($connection, $sql);
-    $r = mysqli_fetch_assoc($res);
+require_once('requires/requireWeb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -111,7 +107,7 @@ require_once('requires/contact_require.php');
             <div class="container">
                 <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                     <div class="col-md-12">
-                        <p class="lead"><?php echo $r['about_us'];?></p>
+                        <p class="lead"><?php echo $aboutUs;?></p>
                     </div>
      
                 </div>
@@ -133,7 +129,7 @@ require_once('requires/contact_require.php');
             <div class="container">
                 <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                     <div class="col-md-12">
-                        <p class="lead"><?php echo $r['our_mission'];?></p>
+                        <p class="lead"><?php echo $ourMission;?></p>
                     </div>
      
                 </div>
@@ -154,7 +150,7 @@ require_once('requires/contact_require.php');
             <div class="container">
                 <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                     <div class="col-md-12">
-                        <p class="lead"><?php echo $r['why_us'];?></p>
+                        <p class="lead"><?php echo $whyUs;?></p>
                     </div>
      
                 </div>
@@ -358,7 +354,7 @@ require_once('requires/contact_require.php');
                                         <h2>Hello Arab Tourism</h2>
                                     </div>
 
-                                    <p>Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide our services in beautiful capital of United Arab Emirates Abu Dhabi city Arabic culture and modern skyscrapers and also in Bosnia &amp; Herzegovina.</p>
+                                    <p><?php echo $aboutUs;?></p>
                                     <div class="footer-icons">
                                         <ul>
                                             <li>

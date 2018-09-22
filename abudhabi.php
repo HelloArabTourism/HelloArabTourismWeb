@@ -1,5 +1,5 @@
 <?php
-require_once('requires/contact_require.php');
+require_once('requires/requireWeb.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,21 +49,23 @@ require_once('requires/contact_require.php');
                             <span class="icon-bar"></span>
                        </button>
 
-                        <a class="navbar-brand" href="#home">
-                            <img src="/img/logo.png" alt="logo">
+                        <a class="navbar-brand" href="index.php">
+                            <img src="img/logo.png" alt="logo">
                         </a>
                     </div>
 
                     <div class="collapse navbar-collapse" id="vesco-menu">
                         <ul class="nav navbar-nav">
-                            <li><a class="smooth-scroll" href="index.php">Home</a></li>
-                            <li><a class="smooth-scroll" href="about.php">About Us</a></li>
-                            <li><a class="smooth-scroll" href="packages.php">Packages</a></li>
-                            <li><a class="smooth-scroll" href="abudhabi.php">Hello Abu Dhabi</a></li>
-                            <li><a class="smooth-scroll" href="bosnia.php">Hello Bosnia</a></li>
-                            <li><a class="smooth-scroll" href="#services">Our Services</a></li>
-
+                            <li><a  href="index.php">Home</a></li>
+                            <li><a  href="packages.php">Hello Offers</a></li>
+                            <li><a  href="packages.php">Packages</a></li>
+                            <li><a href="index.php">Our Services</a></li>
+                            <li><a  href="about.php">About Us</a></li>
                             <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
+                            <li><a  href="abudhabi.php">Hello Abu Dhabi</a></li>
+                            <li><a  href="bosnia.php">Hello Bosnia</a></li>
+                            <li><a  href="#">Plan Your Trip</a></li>
+
 
 
                         </ul>

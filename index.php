@@ -1,5 +1,6 @@
 <?php
-require_once('requires/contact_require.php');
+require_once('requires/requireWeb.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +25,8 @@ ga('require', 'GTM-P7PNZ6M');
 
     <!--Required meta tags-->
     <meta charset="utf-8">
+          <meta name="keywords" content="helloarab, hello arab, tourism company near me, best tourism company in uae, best tourism company in abu dhabi, tour abu dhabi
+,tour abu dhabi from dubai,tour abu dhabi 2018,visit abu dhabi,visit abu dhabi places,city tour abu dhabi,tour abu dhabi and dubai,tour a abu dhabi,tour abu dhabi bus,ride abu dhabi bike shop,isit abu dhabi.com,abu dhabi city tour,our abu dhabi dubai,tour de abu dhabi 2018,tour d'abu dhabi,tour d'abu dhabi classement,tour d'abu dhabi 2017,tour d'abu dhabi 2018 profil,tour d'abu dhabi profil,tour d'abu dhabi cyclisme,tour d'abu dhabi wiki,cyclisme tour de abu dhabi 2018,plus haute tour d'abu dhabi,visit abu dhabi emirates palace,city tour abu dhabi from dubai,day trip abu dhabi from dubai,visit abu dhabi grand mosque,tour to abu dhabi grand mosque,tour in abu dhabi,abu dhabi tour in dubai,tour abu dhabi mosque,guns n roses tour 2018 abu dhabi,tour abu dhabi to dubai,visit abu dhabi visa,y tower abu dhabi,y tower abu dhabi lulu,y tower abu dhabi location,y tower abu dhabi rent,y tower abu dhabi location map,y tower abu dhabi al nahyan,y tower abu dhabi uae,y tower muroor road abu dhabi,bloomsbury abu dhabi y tower,y tower residence abu dhabi,tour abu dhabi 2018 stage 1,1 day tour abu dhabi,formula 1 tour abu dhabi,1 day abu dhabi tour from dubai,tour abu dhabi 2017,european tour abu dhabi 2018,tour abu dhabi cycling 2018,tour abu dhabi stage 2,tour abu dhabi stage 3,visit visa abu dhabi 30 days,tour abu dhabi stage 4,abu dhabi 4wd tour,tour abu dhabi stage 5,stage 5 tour abu dhabi,6 emirates tour from abu dhabi,24/7 tours abu dhabi,7 emirates tour from abu dhabi,visit visa abu dhabi 90 days, Hello Arab, Hello Arab Tourism, hello arab, helloarab, hello arab tourism, helloarabtourism,tour abu dhabi,abu dhabi tour 2016,dubai tour,desert safari abu dhabi,tour abu dhabi 2016,abu dhabi city tour,abu dhabi hotels,excursion abu dhabi,hotel abu dhabi,dubai trip,abu dhabi tour,tour dubai,excursion dubai abu dhabi,abu dhabi tour from dubai,big bus abu dhabi,desert safari uae,abu tour,what to do in abu dhabi,things to do in abu dhabi,abu dhabi sightseeing,safari abu dhabi,abu dhabi 2016,places to visit in abu dhabi,big bus tour abu dhabi,emirates hotel abu dhabi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Title-->
@@ -73,14 +76,14 @@ ga('require', 'GTM-P7PNZ6M');
                     <div class="collapse navbar-collapse" id="vesco-menu">
                         <ul class="nav navbar-nav">
                             <li><a class="smooth-scroll" href="#home">Home</a></li>
-                            <li><a class="smooth-scroll" href="#about">About Us</a></li>
+                            <li><a class="smooth-scroll" href="#sOffers">Hello Offers</a></li>
                             <li><a class="smooth-scroll" href="#packages">Packages</a></li>
-                            <li><a class="smooth-scroll" href="abudhabi.php">Hello Abu Dhabi</a></li>
-                            <li><a class="smooth-scroll" href="bosnia.php">Hello Bosnia</a></li>
                             <li><a class="smooth-scroll" href="#services">Our Services</a></li>
-
+                            <li><a class="smooth-scroll" href="#about">About Us</a></li>
                             <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
-                            <li><a class="smooth-scroll" href="#contact">Plan Your Trip</a></li>
+                            <li><a  href="abudhabi.php">Hello Abu Dhabi</a></li>
+                            <li><a  href="bosnia.php">Hello Bosnia</a></li>
+                            <li><a  href="#">Plan Your Trip</a></li>
 
 
                         </ul>
@@ -107,6 +110,9 @@ ga('require', 'GTM-P7PNZ6M');
                 <div id="home-content-box-inner" class="text-center">
                     <div id="home-heading" class="animated zoomIn">
                         <h3>Hello Arab Tourism <br> Make Travel Remarkable!</h3>
+                           <a href="#sOffers" id="top-to-back" class="btn btn-sm btn-blue1 btn-top-to-back smooth-scroll " title="home" role="button">
+            <i class="fa fa-angle-down"></i>
+        </a>
                     </div>
 <!--                    <div class="searchbox">
                         <div id="searchbox-heading" class="animated zoomIn">
@@ -131,9 +137,7 @@ ga('require', 'GTM-P7PNZ6M');
                         </div>-->
 <br>
                    
-                 <a href="#services" id="top-to-back" class="btn btn-sm btn-blue btn-top-to-back smooth-scroll " title="home" role="button">
-            <i class="fa fa-angle-down"></i>
-        </a>
+           
                 </div>
 
             </div>
@@ -160,6 +164,115 @@ ga('require', 'GTM-P7PNZ6M');
         <!--container-->
     </section>
     <!--End Opt in-->
+    
+    <!-- Packages Section -->
+    <section id="sOffers">
+
+        <div class="content-box ">
+            <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Hello Offers </h3>
+                <div class="content-title-underline"></div>
+            </div>
+
+            <div class="container-fluid ">
+
+                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="col-md-3 col-sm-4">
+                            <a href="uaePackage.php">
+                                <img src="img/packages/1.jpg" class="img-responsive" alt="Work">
+                                
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/uaePackage.php" role="button">All Packages</a>
+
+
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                            <a href="bosniaPackage.php">
+                                <img src="img/packages/2.jpg" class="img-responsive" alt="Work">
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/bosniaPackage.php" role="button">All Packages</a>
+                                                    
+
+                        </div>
+                    
+                    <div class="col-md-3 col-sm-4">
+                        
+                            <a href="georgiaPackage.php">
+                                <img src="img/packages/3.jpg" class="img-responsive" alt="Work">
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/georgiaPackage.php" role="button">All Packages</a>
+
+                        </div>
+                    <div class="col-md-3 col-sm-4">
+                            <a href="azerbaijanPackage.php">
+                                <img src="img/packages/4.jpg" class="img-responsive" alt="Work">
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/azerbaijanPackage.php" role="button">All Packages</a>
+
+                        </div>
+                </div>
+                   <!-- <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        <a class="btn btn-lg btn-general btn-blue " href="packages.php" role="button">All Packages</a>
+                    </div>-->
+            </div>
+        </div>
+        <!-- End Content Box -->
+    </section>
+
+<!-- Packages Section -->
+    <section id="packages">
+
+        <div class="content-box">
+            <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Packages </h3>
+                <div class="content-title-underline"></div>
+            </div>
+
+            <div class="container-fluid">
+
+                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="col-md-3 col-sm-4">
+                            <a href="uaePackage.php">
+                                <img src="img/packages/1.jpg" class="img-responsive" alt="Work">
+                                
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/uaePackage.php" role="button">All Packages</a>
+
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                            <a href="bosniaPackage.php">
+                                <img src="img/packages/2.jpg" class="img-responsive" alt="Work">
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/bosniaPackage.php" role="button">All Packages</a>
+                                                    
+
+                        </div>
+                    
+                    <div class="col-md-3 col-sm-4">
+                        
+                            <a href="georgiaPackage.php">
+                                <img src="img/packages/3.jpg" class="img-responsive" alt="Work">
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/georgiaPackage.php" role="button">All Packages</a>
+
+                        </div>
+                    <div class="col-md-3 col-sm-4">
+                            <a href="azerbaijanPackage.php">
+                                <img src="img/packages/4.jpg" class="img-responsive" alt="Work">
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/azerbaijanPackage.php" role="button">All Packages</a>
+
+                        </div>
+                </div>
+                   <!-- <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        <a class="btn btn-lg btn-general btn-blue " href="packages.php" role="button">All Packages</a>
+                    </div>-->
+            </div>
+        </div>
+        <!-- End Content Box -->
+    </section>
 
     <!--Services Section-->
     <section id="services">
@@ -255,7 +368,7 @@ ga('require', 'GTM-P7PNZ6M');
 
             </div>
         </div>
-
+        
     </section>
 
     <!--About Section-->
@@ -279,7 +392,7 @@ ga('require', 'GTM-P7PNZ6M');
                                     </div>
                                 </div>
                                 <div id="about-desc" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <p>Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide affordable tour packages across the globe. Our head office in beautiful capital of United Arab Emirates Abu Dhabi city of Arabic culture and modern skyscrapers and branch office in Bosnia &amp; Herzegovina country of medieval villages, rivers and lakes, plus the craggy Dinaric Alps.</p>
+                                    <p><?php echo $aboutUs;?></p>
                                 </div>
                                 <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
 
@@ -303,60 +416,7 @@ ga('require', 'GTM-P7PNZ6M');
         </div>
     </section>
 
-    <!-- Packages Section -->
-    <section id="packages">
-
-        <div class="content-box">
-            <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                <h3> Packages </h3>
-                <div class="content-title-underline"></div>
-            </div>
-
-            <div class="container-fluid">
-
-                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                    <div class="col-md-3 col-sm-4">
-                            <a href="uaePackage.php">
-                                <img src="img/packages/1.jpg" class="img-responsive" alt="Work">
-                                
-                            </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/uaePackage.php" role="button">All Packages</a>
-
-                    </div>
-                    <div class="col-md-3 col-sm-4">
-                            <a href="bosniaPackage.php">
-                                <img src="img/packages/2.jpg" class="img-responsive" alt="Work">
-                            </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/bosniaPackage.php" role="button">All Packages</a>
-                                                    
-
-                        </div>
-                    
-                    <div class="col-md-3 col-sm-4">
-                        
-                            <a href="georgiaPackage.php">
-                                <img src="img/packages/3.jpg" class="img-responsive" alt="Work">
-                            </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/georgiaPackage.php" role="button">All Packages</a>
-
-                        </div>
-                    <div class="col-md-3 col-sm-4">
-                            <a href="azerbaijanPackage.php">
-                                <img src="img/packages/4.jpg" class="img-responsive" alt="Work">
-                            </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/azerbaijanPackage.php" role="button">All Packages</a>
-
-                        </div>
-                </div>
-                   <!-- <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-
-                        <a class="btn btn-lg btn-general btn-blue " href="packages.php" role="button">All Packages</a>
-                    </div>-->
-            </div>
-        </div>
-        <!-- End Content Box -->
-    </section>
-
+    
    
 
     <!-- Testimonials -->
@@ -552,6 +612,7 @@ ga('require', 'GTM-P7PNZ6M');
                                     <div class="footer-icons">
                                         <ul>
                                             <li>
+
                                                 <a href="<?php echo $fbURL;?>" target="_blank"><i class="fab fa-facebook"></i></a>
                                             </li>
                                             <li>
