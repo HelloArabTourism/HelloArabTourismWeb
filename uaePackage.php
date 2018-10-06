@@ -1,3 +1,7 @@
+<?php
+include('requires/requireWeb.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +33,60 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+    <!-- Top Starts-->
+    <div id="top">
+        <!-- Container Start-->
+        <div class="container">
+
+            <!-- col-md-6 offer Starts-->
+            <div class="col-md-4">
+                <a href="index.php">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
+            </div>
+            <!-- col-md-6 offer Ends-->
+
+            <!--col-md-6 Starts-->
+            <div class="col-md-8">
+                <!--Menu-->
+                <ul class="menu">
+                    <li><a href="customer_register.php">Register</a></li>
+                    <li><a href="checkout.php">Login</a></li>
+                </ul>
+                <ul class="menu">
+                    <li>
+
+                        <a href="<?php echo $fbURL;?>" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $twURL;?>" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $snpURL;?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $instaURL;?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $linkURL;?>" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $waURL;?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+
+                </ul>
+                <!--Menu Ends-->
+            </div>
+            <!--col-md-6 end-->
+        </div>
+        <!-- Container End-->
+    </div>
+    <!-- Top Ends-->
+
+
     <header>
         <!--Navbar-->
-        <nav class="navbar navbar-fixed-top">
+        <nav class="navbar navbar-dark bg-primary">
 
             <div class="container-fluid">
 
@@ -46,21 +101,20 @@
                             <span class="icon-bar"></span>
                        </button>
 
-                        <a class="navbar-brand" href="#home">
-                            <img src="../img/logo.png" alt="logo">
-                        </a>
+                        
                     </div>
 
                     <div class="collapse navbar-collapse" id="vesco-menu">
                         <ul class="nav navbar-nav">
-                            <li><a class="smooth-scroll" href="index.php">Home</a></li>
-                            <li><a class="smooth-scroll" href="about.php">About Us</a></li>
-                            <li><a class="smooth-scroll" href="packages.php">Packages</a></li>
-                            <li><a class="smooth-scroll" href="abudhabi.php">Hello Abu Dhabi</a></li>
-                            <li><a class="smooth-scroll" href="bosnia.php">Hello Bosnia</a></li>
-                            <li><a class="smooth-scroll" href="#services">Our Services</a></li>
-
-                            <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="index.php#sOffers">Hello Offers</a></li>
+                            <li><a href="packages.php">Packages</a></li>
+                            <li><a href="index.php#services">Our Services</a></li>
+                            <li><a href="index.php#about">About Us</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="uaePackage.php">Hello Abu Dhabi</a></li>
+                            <li><a href="bosnia.php">Hello Bosnia</a></li>
+                            <li><a href="#">Plan Your Trip</a></li>
 
 
                         </ul>
@@ -74,11 +128,40 @@
 
 
     </header>
-    
-    
-    
-    
-        <div id="content">
+
+
+    <!-- Packages Section
+    <section id="packages">
+
+        <!--<div class="content-box">
+            <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                <h3>United Arab Emirate Packages </h3>
+                <div class="content-title-underline"></div>
+            </div>
+
+            <div class="container-fluid">
+            <div class="row">
+                                   <div class="col-md-2">
+                        <a class="weatherwidget-io" href="https://forecast7.com/en/24d4554d38/abu-dhabi/" data-label_1="ABU DHABI" data-label_2="United Arab Emirates" data-theme="weather_one" >ABU DHABI United Arab Emirates</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+                    </div>
+                <div class="col-md-7">
+                    <img class="center-block" src="../img/Coming-soon.png" alt="Coming Soon">
+                </div>
+            </div>
+                
+            </div>
+            <div class="cointainer">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    <div id="content">
         <!--content-->
         <div class="container">
             <!--container-->
@@ -113,7 +196,7 @@
                 <!--box end-->
                 <div class="row">
                     <!--row-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
+                    <div class="col-md-4 col-sm-6 center-responsive">
                         <!--col-md-4 col-sm-6 center-responsive-->
                         <div class="product">
                             <!--product-->
@@ -138,7 +221,7 @@
 
                     </div>
                     <!--col-md-4 col-sm-6 center-responsive end-->
- <div class="col-md-4 col-sm-6 center-responsive">
+                    <div class="col-md-4 col-sm-6 center-responsive">
                         <!--col-md-4 col-sm-6 center-responsive-->
                         <div class="product">
                             <!--product-->
@@ -163,7 +246,7 @@
 
                     </div>
                     <!--col-md-4 col-sm-6 center-responsive end-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
+                    <div class="col-md-4 col-sm-6 center-responsive">
                         <!--col-md-4 col-sm-6 center-responsive-->
                         <div class="product">
                             <!--product-->
@@ -188,7 +271,7 @@
 
                     </div>
                     <!--col-md-4 col-sm-6 center-responsive end-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
+                    <div class="col-md-4 col-sm-6 center-responsive">
                         <!--col-md-4 col-sm-6 center-responsive-->
                         <div class="product">
                             <!--product-->
@@ -213,7 +296,7 @@
 
                     </div>
                     <!--col-md-4 col-sm-6 center-responsive end-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
+                    <div class="col-md-4 col-sm-6 center-responsive">
                         <!--col-md-4 col-sm-6 center-responsive-->
                         <div class="product">
                             <!--product-->
@@ -290,35 +373,38 @@
 
     </div>
     <!--content ends-->
-    
-    
-   
-  
-<!--Footer-->
-<?php
-            include("requires/footer.php");
+
+
+    <!--Footer-->
+    <?php
+            include("footer.php");
             
             ?>
-<a href="#home" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+        <a href="#box" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
             <i class="fa fa-angle-up"></i>
         </a>
-    <!--JQuery file-->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!--bootstrap JS-->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!--WoW js-->
-    <script src="js/wow/wow.min.js"></script>
-    <!--magnific popup js-->
-    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <!--Owl Carousel JS-->
-    <script src="js/owl-carousel/owl.carousel.min.js"></script>
-    <!--Google Map-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAot2fgi5npA_GhLlOr4-YAd4MQlSPp_yk"></script>
-    <script src="js/map/map.js"></script>
-    <!--Add Custom Js and JQuery-->
-    <script src="js/custom.js"></script>
-    <!--easing Jquery-->
-    <script src="js/easing/jquery.easing.1.3.js"></script>
+        <!--JQuery file-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!--bootstrap JS-->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!--WoW js-->
+        <script src="js/wow/wow.min.js"></script>
+        <!--magnific popup js-->
+        <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!--Owl Carousel JS-->
+        <script src="js/owl-carousel/owl.carousel.min.js"></script>
+        <!--Google Map-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAot2fgi5npA_GhLlOr4-YAd4MQlSPp_yk"></script>
+        <script src="js/map/map.js"></script>
+        <!--Add Custom Js and JQuery-->
+        <script src="js/custom.js"></script>
+        <!--easing Jquery-->
+        <script src="js/easing/jquery.easing.1.3.js"></script>
+
+
+        <script type="text/javascript">
+            TranslateIt.init();
+        </script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 
                 Font Family                 : Roboto Condensed
                 
-                Greenish Blue               : #34c6d3       (Buttons, Icons, Links, Lines & Backgrounds)
+                Greenish Blue               : #337ab7       (Buttons, Icons, Links, Lines & Backgrounds)
                 Steel Gray                  : #41464b       (Headings)
                 Blue Bayoux                 : #64707b       (Paragraphs)
                 White                       : #fff          (Text With Black Backgrounds)
@@ -13,8 +13,10 @@
 
 /* General CSS */
 
+
 html,
 body {
+    
     height: 100%;
 }
 
@@ -32,14 +34,168 @@ h3 {
     color: #41464b;
     text-transform: uppercase;
 }
+h3>small{
+     color: #fff;
+    text-transform: uppercase;
+}
+
+ /*Top Navbar Styles*/
+
+#top {
+    padding: 0 0;
+    background: #3e4249;
+}
+
+#top.offer {
+    color: #fff;
+}
+
+#top.offer.btn {
+    text-transform: uppercase;
+
+}
+
+@media(max-width:991px) {
+    #top.offer {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:991px) {
+    #top {
+        font-size: 12px;
+        text-align: center;
+
+    }
+}
+
+#top a{
+    color: #fff;
+}
+
+#top ul.menu {
+    padding-top: 20px;
+    margin: 0;
+    text-align: right;
+    font-size: 12px;
+    list-style: none;
+}
+
+@media(max-width:991px) {
+    #top ul.menu {
+
+        text-align: center;
+
+    }
+}
+
+#top ul.menu > li {
+    display: inline-block;
+}
+
+#top ul.menu > li a {
+    color: #fff;
+
+}
+
+#top ul.menu > li + li:before {
+    content: "|\00a0";
+    padding: 0 5px;
+    color: #fff;
+}
+
+/*====================================================
+                       NAVIGATION
+======================================================*/
+
+.navbar {
+    padding-top: 14px 2px;
+     margin-bottom: 0;
+    padding-bottom: 7px;
+    
+}
+/*.vesco-top-nav {
+    background: rgba(66, 134, 244, 0.5);
+    
+}*/
+
+.vesco-nav-wrapper {
+    padding: 0 85px;
+}
+
+.navbar-nav {
+    float: right;
+}
 
 
 
+
+
+.navbar-nav>li>a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+    background: none;
+    color: #3E4249;
+}
+
+.navbar-toggle {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #fff;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-collapse {
+    max-height: none !important;
+    
+}
+
+.vesco-top-nav ul.navbar-nav>li.active>a {
+    color: #337ab7;
+}
+
+
+
+}
+
+
+@media (max-width: 1280px) {
+    
+    .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .navbar-header .collapse, .navbar-toggle {
+    display:block !important;
+  }
+  .navbar-header {
+    float: none;
+  }
+
+   
+}
+
+
+
+  
 /*====================================================
                         HOME
 ======================================================*/
 
 #home {
+    margin-top: 0;
     height: 100%;
 }
 
@@ -60,7 +216,7 @@ h3 {
 #home-content-box-inner {
     display: table-cell;
     vertical-align: middle;
-    /* text-align: center; */
+    /* text-align: center;*/
 }
 
 #home-heading h3 {
@@ -137,13 +293,13 @@ h3 {
 }
 
 .btn-blue {
-    border-color: #34c6d3;
-    color: #34c6d3;
+    border-color: #337ab7;
+    color: #337ab7;
 }
 
 .btn-blue:hover,
 .btn-blue:focus {
-    background-color: #34c6d3;
+    background-color: #337ab7;
     color: #fff;
 }
 
@@ -165,7 +321,7 @@ h3 {
     border-radius: 0;
 }
 .btn-blue1 {
-        background-color: #34c6d3;
+        background-color: #337ab7;
     color: #fff;
 
 }
@@ -225,7 +381,7 @@ h3 {
 .content-title-underline {
     width: 30px;
     height: 3px;
-    background-color: #34c6d3;
+    background-color: #337ab7;
     margin: 0 auto 30px auto;
 }
 
@@ -240,7 +396,7 @@ Services
 }
 
 .service-item-icon {
-    color: #34c6d3;
+    color: #337ab7;
     float: left;
     padding: 15px;
     margin-right: 25px;
@@ -251,7 +407,7 @@ Services
 
 .service-item:hover .service-item-icon i {
     color: #fff;
-    background-color: #34c6d3;
+    background-color: #337ab7;
 }
 
 .service-item-title h3 {
@@ -377,7 +533,7 @@ Activites Section
 }
 
 #activites .btn {
-    color: #34c6d3;
+    color: #337ab7;
 }
 
 #activites .btn .active:hover {
@@ -405,7 +561,7 @@ h4.team-member-name {
 }
 
 h4.team-member-designation {
-    color: #34c6d3;
+    color: #337ab7;
     font-size: 15px;
     font-weight: 700;
     font-style: italic;
@@ -440,7 +596,7 @@ Social Icons
 }
 
 .social-icon i:hover {
-    color: #34c6d3;
+    color: #337ab7;
 
 }
 /*====================================================
@@ -696,7 +852,7 @@ Social Icons
 }
 
 .footer-contacts p span {
-  color: #3EC1D5;
+  color: #337ab7;
   font-weight: 700;
 }
 
@@ -710,7 +866,7 @@ Social Icons
 }
 
 .popular-tag ul li a:hover, .footer-icons ul li a:hover {
-  background: #3EC1D5;
+  background: #337ab7;
   border: 1px solid #3EC1D5;
   color: #fff;
 }
@@ -739,7 +895,7 @@ Social Icons
 
 .copyright-text a:hover {
   text-decoration: underline;
-  color: #3EC1D5;
+  color: #337ab7;
 }
 
 .copyright-text a {
@@ -752,7 +908,7 @@ Social Icons
 }
 
 .copyright a, .credits a {
-  color: #3EC1D5;
+  color: #337ab7;
 }
 
 .credits {
@@ -775,88 +931,8 @@ Social Icons
     margin: 7px 0 0 0;
     color: white;
 }
-/*====================================================
-                       NAVIGATION
-======================================================*/
 
-.navbar {
-    padding: 14px 2px;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    background-color: rgba(0, 0, 0, 0);
-}
-.vesco-top-nav {
-    background: rgba(0, 0, 0, 0.4);
-    
-}
 
-.vesco-nav-wrapper {
-    padding: 0 85px;
-}
-
-.navbar-nav {
-    float: right;
-}
-.navbar-brand>img{
-    position:relative;
-    bottom: 40px;
-}
-
-.navbar-nav>li>a {
-    color: #fff;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-.navbar-nav>li>a:hover,
-.navbar-nav>li>a:focus {
-    background: none;
-    color: #34c6d3;
-}
-
-.navbar-toggle {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #fff;
-    border-radius: 0;
-}
-
-.navbar-toggle .icon-bar {
-    background-color: #fff;
-}
-
-.navbar-collapse {
-    max-height: none !important;
-    
-}
-
-.vesco-top-nav ul.navbar-nav>li.active>a {
-    color: #34c6d3;
-}
-
-@media (max-width: 768px) {
-  .navbar-brand {
-    height: 80px; // Logo will not overhang
-  }
-  #LC-navbar {
-    background-color: #ccc; // Change background color
-  }
-  .navbar-toggle {
-    margin-top: 15px; // Adjust toggle position
-  }
-}
-@media (max-width:568px){
-     .navbar-brand {
-    height: 50px; // Logo will not overhang
-  }
-  #LC-navbar {
-    background-color: #ccc; // Change background color
-  }
-  .navbar-toggle {
-    margin-top: 25px; // Adjust toggle position
-  } 
-}
 
 
 
@@ -941,3 +1017,281 @@ Social Icons
 	table.table td .add {
 		display: none;
 	}
+
+/*Products Styles*/
+
+#hot h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #4993e4;
+    font-weight: 100;
+    text-align: center;
+}
+
+#content {
+    padding-left: 25px;
+
+}
+
+.single {
+    width: 290px;
+}
+
+@media (max-width: 768px) {
+    .single {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+#content .product {
+    background: #fff;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+#content .product .text p.price {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+}
+
+#content .product .text .buttons {
+    clear: both;
+    text-align: center;
+}
+
+#content .product .text h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#content .product .text h3 a {
+    color: rgb(85, 85, 85);
+}
+
+#content .product .text {
+    padding: 10px 10px 0px;
+}
+
+#content .product .text .buttons .btn {
+    margin-bottom: 10px;
+}
+
+/* Breadcrumb Styles */
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 1px 5p rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb > li + li:before {
+    content: ">\00a0";
+    color: #cccccc;
+
+}
+
+@media (max-width: 991px) {
+    .breadcrumb {
+        padding: 8px 0;
+        text-align: center;
+    }
+}
+
+/*Product Category and Category Styles*/
+
+#content .panel.sidebar-menu {
+    box-sizing: border-box;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#content .panel.sidebar-menu ul.nav.category-menu {
+    margin-bottom: 20px;
+}
+
+#content .panel.sidebar-menu ul.nav.category-menu li a {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#content .panel.sidebar-menu h3 {
+    padding: 5px 0;
+    margin: 0;
+}
+
+
+/* Shop Products Styles */
+
+@media (max-width: 768px) {
+    .center-responsive {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .center-responsive {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+ @media (min-width: 768px) and (max-width: 991px) {
+      #myCarousel .carousel-inner .carousel-item .carousel-item-:last-child {
+        display: none;
+      }
+   }
+@media (max-width: 768px) {
+     #mymyCarousel .carousel-inner {
+      height: 320px;
+    }
+ }
+.carousel-inner {
+  overflow-y: hidden;
+}
+.carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev    { left: -25%; }
+.carousel-control        { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.carousel-inner .item-item {
+  padding:0!important;
+}
+
+
+
+/*Advantages Styles*/
+
+.box {
+    background: #fff;
+    margin: 0 0 30px;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#advantages {
+    text-align: center;
+}
+
+#advantages .box .icon {
+    position: absolute;
+    font-size: 120px;
+    width: 100%;
+    text-align: center;
+    top: -20px;
+    left: 0;
+    height: 100%;
+    float: left;
+    color: #eeeeee;
+    transition: all 0.2s ease-out;
+    z-index: 1;
+    box-sizing: border-box;
+
+}
+
+#advantages .box h3 {
+    position: relative;
+    margin: 0 0 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+#advantages .box h3 a:hover {
+    text-decoration: none;
+}
+
+#advantages .box p {
+    position: relative;
+    color: #555555;
+    z-index: 2;
+}
+/*Details styles*/
+#content #productMain{
+    margin-bottom: 30px;
+}
+#content #productMain .price{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 40px;
+}
+#content #mainImage{
+    box-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+#content #thumbs a{
+    display: block;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    border: solid 2px transparent;
+}
+#content .headline{
+    height: 350px;
+}
+/* Cart page Styles */
+
+#content #cart .table tbody tr td img {
+width: 50px;
+}
+
+#content #cart .table tbody tr td input {
+width: 40px;
+text-align: right;
+
+}
+
+#content #cart .table tbody tr td{
+vertical-align: middle;
+
+}
+#content #cart .table tfoot {
+font-size:18px;
+}
+
+.box .box-footer {
+background: #f7f7f7;
+margin: 30px -20px -20px;
+padding:20px;
+border-top: solid 1px #eeeeee;
+
+}
+
+.box .box-footer:before,
+.box .box-footer:after {
+content:" ";
+display: table;
+}
+
+.box .box-footer:after {
+clear:both;
+}
+
+.box .box-header {
+background:#f7f7f7;
+margin:-20px -20px 20px;
+padding:20px;
+border-bottom: solid 1px #eeeeee;
+
+}
+
+#content #order-summary table {
+margin-top: 20px;
+
+}
+#content #order-summary table td {
+color: #999999;
+}
+
+#content #order-summary table tr.total td,
+ #content #order-summary table tr.total th{
+ font-size: 18px;
+ color:#555555;
+ font-weight: 700;
+ 
+ }
+
+
