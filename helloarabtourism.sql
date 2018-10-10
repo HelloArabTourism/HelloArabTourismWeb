@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2018 at 05:40 PM
+-- Generation Time: Oct 10, 2018 at 02:30 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -40,7 +40,7 @@ CREATE TABLE `about_us` (
 --
 
 INSERT INTO `about_us` (`about_id`, `about_us`, `our_mission`, `why_us`) VALUES
-(1, 'Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide affordable tour packages across the globe. Our head office in beautiful capital of United Arab Emirates Abu Dhabi city of Arabic culture and modern skyscrapers and branch office in Bosnia & Herzegovina country of medieval villages, rivers and lakes, plus the craggy Dinaric Alps', 'Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide affordable tour packages across the globe. Our head office in beautiful capital of United Arab Emirates Abu Dhabi city of Arabic culture and modern skyscrapers and branch office in Bosnia & Herzegovina country of medieval villages, rivers and lakes, plus the craggy Dinaric Alps', 'Hello Arab Tourism is travel an tourism agency. We make travel remarkable . We provide affordable tour packages across the globe. Our head office in beautiful capital of United Arab Emirates Abu Dhabi city of Arabic culture and modern skyscrapers and branch office in Bosnia & Herzegovina country of medieval villages, rivers and lakes, plus the craggy Dinaric Alps');
+(1, 'Hello Arab Tourism â€œmake travel remarkable\" is a Destination Management Company (Tour Operator) specialized in the creation, organization, and operation of tailor-made Incentive Programs across Abu Dhabi city and the wider emirates.    Hello Arab name came from travels over the world because what you always hear is HELLO almost more than 100 times on each trip and we decided to be the first who say HELLO to our guests. ARAB came from our region so we want all the world to know about our heritage, culture, and experience the true Arabian hospitality.   Hello Arab travelers will get the best of what can be achieved in the Travel & Tourism sector.   Inbound Tours Operating (Destination Management) is our main specialty in the Gulf Pride Abu Dhabi City Pearl of the Gulf with a team of local experts were our packages are designed by our Travel Consultants Team and customer self-planning in our website.  Services we provide is unique and needed to make travel remarkable.   Hello Arab is honored to be involved with travelers in their Arabian Experience.', 'To provide travelers with the best of what can be provided in the tourism sector. Developing and promoting tours and packages. Promoting the Desert Pearl Abu Dhabi City is our high priority mission. Spreading peace and love to the world.  (One world one love).', 'Hello Arab offers the services you looking for with true Arabian hospitality. Our travel consultant team and customer are involved in improving our services. Hello Arab was born and grown in the Gulf Pearl, therefore, the real tours and safaris with Hello Arab and nobody can make you live the adventure like we will. Our team have an excellent local and international knowledge and speak a variety of languages. We are not the best but sure we are different and unique in our services. Hello Arab Tourism will be honored by serving your travel and making it unforgettable. ');
 
 -- --------------------------------------------------------
 
@@ -98,6 +98,36 @@ CREATE TABLE `packages` (
 
 INSERT INTO `packages` (`pid`, `packageName`, `packageDes`, `tourDuration`, `nPerson`, `price`, `sDate`, `eDate`, `includes`, `photo`, `description`, `active`, `addby`) VALUES
 (16, 'Azerbijan Package', 'Azerbijan', '6 nights 7 days', 2, 2500, '2018-09-03', '2018-09-10', '', 'upload/Azerbaijan_1535981009.jpg', '6 nights/ 7 days :ðŸ‘‡\r\n\r\n3 days Baku (Rich Hotel )\r\n2 days Gabala (Qabala Resort  Hotel ) \r\n1 day  Guba   (Quba Shahdag Hotel )\r\nâ–ª2 persons\r\nâ–ª1 room \r\nTransfer from airport + Hotel + Car + Tour everywhere \r\nTotally :  5000 AED\r\nTour time : \r\nBAKU --f', 1, 'salman.shabbir13@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `plantrip`
+--
+
+CREATE TABLE `plantrip` (
+  `pTripID` int(11) NOT NULL,
+  `tDesc` varchar(255) NOT NULL,
+  `travelDateF` date NOT NULL,
+  `travelDateT` date NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `contactno` varchar(255) NOT NULL,
+  `adult` int(11) NOT NULL,
+  `child` int(11) NOT NULL,
+  `infant` int(11) NOT NULL,
+  `services` varchar(255) NOT NULL,
+  `message` longtext NOT NULL,
+  `status` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `plantrip`
+--
+
+INSERT INTO `plantrip` (`pTripID`, `tDesc`, `travelDateF`, `travelDateT`, `name`, `email`, `contactno`, `adult`, `child`, `infant`, `services`, `message`, `status`) VALUES
+(2, 'Canada', '2019-05-15', '2019-05-25', 'Salman Shabbir', 'salman@helloarabtourism.com', '+971554554994', 1, 0, 0, 'Visa, Air Ticket, Airport Tranport, Hotel, Car Rent', 'Please contact me as soon as possible.', 0),
+(3, 'Germany', '2019-06-25', '2019-07-15', 'Salman Shabbir', 'salman@helloaabtourism.com', '0554554994', 1, 0, 0, 'Visa, Air Ticket, Airport Tranport, Hotel, Tour Guide, Car Rent', 'abcd', 0);
 
 -- --------------------------------------------------------
 
@@ -205,6 +235,12 @@ ALTER TABLE `packages`
   ADD PRIMARY KEY (`pid`);
 
 --
+-- Indexes for table `plantrip`
+--
+ALTER TABLE `plantrip`
+  ADD PRIMARY KEY (`pTripID`);
+
+--
 -- Indexes for table `table_order`
 --
 ALTER TABLE `table_order`
@@ -243,13 +279,19 @@ ALTER TABLE `about_us`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `packages`
 --
 ALTER TABLE `packages`
   MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `plantrip`
+--
+ALTER TABLE `plantrip`
+  MODIFY `pTripID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `table_order`
