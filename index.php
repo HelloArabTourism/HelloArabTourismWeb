@@ -1,6 +1,6 @@
 <?php
 
-require_once('requires/requireWeb.php');
+include('requires/requireWeb.php');
 
 ?>
 
@@ -535,12 +535,13 @@ require_once('requires/requireWeb.php');
             <div class="container-fluid">
 
                 <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                   
                     <div class="col-md-3 col-sm-4">
-                            <a href="uaePackage.php">
+                            <a href="packages.php">
                                 <img src="img/packages/1.jpg" class="img-responsive" alt="Work">
                                 
                             </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="uaePackage.php" role="button">All Packages</a>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="packages.php" role="button">All Packages</a>
 
                     </div>
                     <div class="col-md-3 col-sm-4">

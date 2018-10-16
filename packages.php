@@ -1,3 +1,8 @@
+<?php
+
+include('requires/requireWeb.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,16 +34,66 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+ <!-- Top Starts-->
+    <div id="top">
+        <!-- Container Start-->
+        <div class="container">
+
+            <!-- col-md-6 offer Starts-->
+            <div class="col-md-4">
+                <a href="index.php">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
+            </div>
+            <!-- col-md-6 offer Ends-->
+
+            <!--col-md-6 Starts-->
+            <div class="col-md-8">
+                <!--Menu-->
+                <ul class="menu">
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+                <ul class="menu">
+                    <li>
+
+                        <a href="<?php echo $fbURL;?>" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $twURL;?>" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $snpURL;?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $instaURL;?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $linkURL;?>" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $waURL;?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+
+                </ul>
+                <!--Menu Ends-->
+            </div>
+            <!--col-md-6 end-->
+        </div>
+        <!-- Container End-->
+    </div>
+    <!-- Top Ends-->
+
     <header>
-        <!--Navbar-->
-        <nav class="navbar navbar-fixed-top">
+
+        <nav class="navbar navbar-dark bg-primary">
 
             <div class="container-fluid">
 
                 <div class="vesco-nav-wrapper">
 
                     <div class="navbar-header">
-
+                        
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#vesco-menu">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
@@ -46,21 +101,20 @@
                             <span class="icon-bar"></span>
                        </button>
 
-                        <a class="navbar-brand" href="#home">
-                            <img src="../img/logo.png" alt="logo">
-                        </a>
+
                     </div>
 
                     <div class="collapse navbar-collapse" id="vesco-menu">
                         <ul class="nav navbar-nav">
-                            <li><a class="smooth-scroll" href="index.php">Home</a></li>
-                            <li><a class="smooth-scroll" href="about.php">About Us</a></li>
-                            <li><a class="smooth-scroll" href="packages.php">Packages</a></li>
-                            <li><a class="smooth-scroll" href="abudhabi.php">Hello Abu Dhabi</a></li>
-                            <li><a class="smooth-scroll" href="bosnia.php">Hello Bosnia</a></li>
-                            <li><a class="smooth-scroll" href="#services">Our Services</a></li>
-
-                            <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a  href="index.php#sOffers">Hello Offers</a></li>
+                            <li><a href="packages.php">Packages</a></li>
+                            <li><a href="index.php">Our Services</a></li>
+                            <li><a  href="index.php#about">About Us</a></li>
+                            <li><a href="index.php">Contact Us</a></li>
+                            <li><a href="packages.php">Hello Abu Dhabi</a></li>
+                            <li><a href="#">Hello Bosnia</a></li>
+                            <li><a href="plantrip.php">Plan Your Trip</a></li>
 
 
                         </ul>
@@ -72,10 +126,7 @@
         </nav>
 
 
-
     </header>
-    
-    
     
     
         <div id="content">
@@ -87,7 +138,7 @@
                 <ul class="breadcrumb">
                     <!--breadcrumb-->
                     <li><a href="index.php">Home</a></li>
-                    <li>Abu Dhabi Packages</li>
+                    <li>Packages</li>
                 </ul>
                 <!--breadcrumb end-->
 
@@ -105,177 +156,96 @@
 
             <div class="col-md-9">
                 <!--col-md-9-->
-                <div class="box">
-                    <!--box-->
-                    <h1>Abu Dhabi Packages</h1>
+                <?php
+                if(!isset($_GET['t_cat'])){
+                    if(!isset($_GET['cat'])){
+                        echo " 
+                        
+                        <div class='box'>
+                    <h1>Packages</h1>
                     <p>Affordable Packages With Best Service In Region</p>
                 </div>
+                        
+                        ";
+                    }
+                }
+                ?>
+                
                 <!--box end-->
                 <div class="row">
                     <!--row-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
-                        <!--col-md-4 col-sm-6 center-responsive-->
-                        <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
+                     <?php
+                    if(!isset($_GET['t_cat'])){
+                        if(!isset($_GET['cat'])){
+                            $per_page = 6;/*Product per page*/
+                            if(isset($_GET['page'])){
+                                $page = $_GET['page'];
+                            }else{
+                                $page=1;
+                            }
+                            $start_from = ($page-1) * $per_page;/*pages according to product*/
+                            
+                       $get_products="select * from packages order by 1 DESC LIMIT $start_from, $per_page";
+                            $run_products = mysqli_query($connection, $get_products);
+                            if($run_products){
+                            while($row_products = mysqli_fetch_array($run_products)){
+                                $pid = $row_products['pid'];
+                                $p_title = $row_products['package_title'];
+                                $p_price = $row_products['package_price'];
+                                $p_img1 = $row_products['img1'];
+                                echo "
+                                <div class='col-md-4 col-sm-6 center-responsive'>
+                                <div class='product'>
+                                <a href='details.php?pid=$pid'>
+                                <img src='admin_area/packages/package_images/$p_img1' class='img-responsive'>
+                                </a>
+                                <div class='text'>
+                                <h3><a href='details.php?pro_id=$pid'>$p_title</a></h3>
+                                <p class='price'>$ $p_price</p>
+                                <p class='buttons'>
+                                <a href='details.php?pid=$pid' class='btn btn-default'>View Details</a>
+                                <a href='details.php?pid=$pid' class='btn btn-primary'><i class='fa fa-shopping-cart'></i>Add To Cart</a>
+                                </p>
                                 </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-
-                    </div>
-                    <!--col-md-4 col-sm-6 center-responsive end-->
- <div class="col-md-4 col-sm-6 center-responsive">
-                        <!--col-md-4 col-sm-6 center-responsive-->
-                        <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
                                 </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-
-                    </div>
-                    <!--col-md-4 col-sm-6 center-responsive end-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
-                        <!--col-md-4 col-sm-6 center-responsive-->
-                        <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
+                                
                                 </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
+                                
+                                
+                                ";
 
-                    </div>
-                    <!--col-md-4 col-sm-6 center-responsive end-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
-                        <!--col-md-4 col-sm-6 center-responsive-->
-                        <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-
-                    </div>
-                    <!--col-md-4 col-sm-6 center-responsive end-->
-                     <div class="col-md-4 col-sm-6 center-responsive">
-                        <!--col-md-4 col-sm-6 center-responsive-->
-                        <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-
-                    </div>
-                    <!--col-md-4 col-sm-6 center-responsive end-->
-                    <div class="col-md-4 col-sm-6 center-responsive">
-                        <!--col-md-4 col-sm-6 center-responsive-->
-                        <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-
-                    </div>
-                    <!--col-md-4 col-sm-6 center-responsive end-->
+                            }
+                            }else{
+                                
+                            }
+                    ?>
                 </div>
                 <!--row end-->
                 <center>
                     <!--center-->
                     <ul class="pagination">
                         <!--pagination-->
-                        <li><a href="shop.php">First Page</a></li>
-                        <li><a href="shop.php">1</a></li>
-                        <li><a href="shop.php">2</a></li>
-                        <li><a href="shop.php">3</a></li>
-                        <li><a href="shop.php">4</a></li>
-                        <li><a href="shop.php">5</a></li>
-                        <li><a href="shop.php">Last Page</a></li>
+                        <?php
+                            $query = "select *from packages";
+                            $result= mysqli_query($connection, $query);
+                            $total_records = mysqli_num_rows($result);//counting data inside table
+                            $total_pages = ceil($total_records / $per_page);
+                            echo "
+                            <li><a href='packages.php?page=1'>".'First Page'."</a></li>
+                            ";
+                            for($i=1; $i <= $total_pages; $i++){
+                                echo "
+                                
+                                <li><a href='packages.php?page=".$i."'>".$i."</a></li>
+                                ";
+                            };
+                            echo "
+                            <li><a href='packages.php?page=$total_pages'>".'Last Page'."</a></li>
+                            ";
+                             }
+                    }
+                    
+                            ?>
 
                     </ul>
                     <!--pagination end-->
@@ -296,7 +266,7 @@
   
 <!--Footer-->
 <?php
-            include("requires/footer.php");
+            include("footer.php");
             
             ?>
 <a href="#home" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
