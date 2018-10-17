@@ -187,8 +187,17 @@ include('requires/requireWeb.php');
                             
                        $get_products="select * from packages order by 1 DESC LIMIT $start_from, $per_page";
                             $run_products = mysqli_query($connection, $get_products);
-                            if($run_products){
+                               if(mysqli_num_rows($run_products) == 0){
+                                    echo "
+                                    <div class='col-md-12 center-responsive'>
+                                    <img src='img/Coming-soon.png' class='img-responsive'>
+                                    </div>
+                                    
+                                    
+                                    ";
+                                }else{
                             while($row_products = mysqli_fetch_array($run_products)){
+                            
                                 $pid = $row_products['pid'];
                                 $p_title = $row_products['package_title'];
                                 $p_price = $row_products['package_price'];
@@ -215,9 +224,8 @@ include('requires/requireWeb.php');
                                 ";
 
                             }
-                            }else{
-                                
                             }
+                            
                     ?>
                 </div>
                 <!--row end-->
@@ -251,6 +259,12 @@ include('requires/requireWeb.php');
                     <!--pagination end-->
                 </center>
                 <!--center end-->
+                
+                <?php
+                gettcatpro();
+                getcatpro();
+                
+                ?>
 
             </div>
             <!--col-md-9 ends-->

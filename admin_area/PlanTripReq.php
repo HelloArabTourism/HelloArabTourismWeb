@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../connect.php');
+include('includes/db.php');
 if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
     /*$fname = $_SESSION['fname'];*/
     $email = $_SESSION['email'];
@@ -40,6 +40,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
         
         <div class="content-wrapper">
             <div class="container-fluid">
+            <h3 class="text-center">Plan You Trip Request</h3>
 <div class="table-responsive">
                         <table class="table table-hover">
                             <thead class="thead-dark">
@@ -56,6 +57,7 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                                     <th>Infant</th>
                                      <th>Services</th>
                                     <th>Message</th>
+                                    <th>Status</th>
 
                                 </tr>
                             </thead>
@@ -74,8 +76,9 @@ if(isset($_SESSION['email']) & !empty($_SESSION['email'])){
                         echo " <td>".$row['adult']."</td>";
                         echo " <td>".$row['child']."</td>";
                         echo " <td>".$row['infant']."</td>";
-                        echo " <td colspan='3'>".$row['services']."</td>";
-                        echo " <td colspan='4'>".$row['message']."</td>";
+                        echo " <td>".$row['services']."</td>";
+                        echo " <td>".$row['message']."</td>";
+                        echo " <td>".$row['status']."</td>";
 
 
 

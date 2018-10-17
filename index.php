@@ -59,7 +59,9 @@ include('requires/requireWeb.php');
     <!--font-awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!--Bootstrap CSS-->
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
     <!--animate CSS-->
     <link rel="stylesheet" href="css/animate/animate.css">
     <!--magnific popup-->
@@ -152,6 +154,7 @@ include('requires/requireWeb.php');
                             <li><a class="smooth-scroll" href="#services">Our Services</a></li>
                             <li><a class="smooth-scroll" href="#about">About Us</a></li>
                             <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
+                            <li><a class="smooth-scroll" href="#gallary">Gallary</a></li>
                             <li><a href="uaePackage.php">Hello Abu Dhabi</a></li>
                             <li><a href="bosnia.php">Hello Bosnia</a></li>
                             <li><a href="plantrip.php">Plan Your Trip</a></li>
@@ -237,288 +240,80 @@ include('requires/requireWeb.php');
     <!-- Packages Section -->
     <section id="sOffers">
 
-        <div class="content-box ">
+ 
+   
+  
+   
+   
+    
+            
+      <div class="content-box">
             <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
                 <h3> Hello Offers </h3>
                 <div class="content-title-underline"></div>
             </div>
-           <div id="myCarouselWrapper" class="container-fluid">
 
-    	 <div id="myCarousel" class="carousel slide">
-    	 
+            <div class="container-fluid">
 
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-        <div class="item-item col-md-3 col-sm-4 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
+                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                   
+                    
+                             <?php
+      
+      $get_products="select * from packages";
+                            $run_products = mysqli_query($connection, $get_products);
+                               if(mysqli_num_rows($run_products) == 0){
+                                    echo "
+                                    <div class='col-md-4 col-md-offset-4 center-responsive'>
+                                    <img src='img/Coming-soon.png' class='img-responsive'>
+                                    </div>
+                                    
+                                    
+                                    ";
+                                }else{
+                            while($row_products = mysqli_fetch_array($run_products)){
+                            
+                                $pid = $row_products['pid'];
+                                $p_title = $row_products['package_title'];
+                                $p_price = $row_products['package_price'];
+                                $p_img1 = $row_products['img1'];
+                                echo "
+                                <div class='col-md-3 col-sm-4'>
+                                <div class='product'>
+                            
+                            <a href='details.php?pro_id=$pid'>
+                                <img src='admin_area/packages/package_images/$p_img1'  class='img-responsive'>
+                                <div class='text'>
+                                    
                                     <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
+                                        <a href='details.php?pro_id=$pid'>$p_title</a></h3>
+                                    <p class='price'>$ $p_price</p>
+                                    <p class='buttons'>
+                                        <a href='details.php?pid=$pid' class='btn btn-default'>View detail</a>
+                                        <a href='details.php?pid=$pid' class='btn btn-primary'><i class='fa fa-shopping-cart'></i> Book Now</a>
                                     </p>
                                 </div>
-                                <!--text ends-->
                             </a>
-                            <!--a end-->
                         </div>
-                        <!--product end-->
-        </div>
-      </div>
-            <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
+                      
             
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
+           </div>
+                                
+                                ";
+                            }
+                               }
+      
+      
+      ?>
+
+                  
+                
+                </div>
+                   <!-- <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        <a class="btn btn-lg btn-general btn-blue " href="packages.php" role="button">All Packages</a>
+                    </div>-->
             </div>
-             <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-             <div class="item">
-                <div class="item-item col-md-3 col-sm-4 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-             <div class="item">
-                <div class="item-item col-md-3 col-sm-4 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-                     <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-                     <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-                     <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-                     <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-             <div class="item">
-                <div class="item-item col-md-3 col-sm-12 col-xs-12 center-responsive">
-            
-            <div class="product">
-                            <!--product-->
-                            <a href="details.php">
-                                <!--a-->
-                                <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                <div class="text">
-                                    <!--text-->
-                                    <h3>
-                                        <a href="details.php">Abu Dhabi Tour 7 Days</a></h3>
-                                    <p class="price">$2000</p>
-                                    <p class="buttons">
-                                        <a href="details.php" class="btn btn-default">View detail</a>
-                                        <a href="details.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Book Now</a>
-                                    </p>
-                                </div>
-                                <!--text ends-->
-                            </a>
-                            <!--a end-->
-                        </div>
-                        <!--product end-->
-        </div>
-           
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
- </div>
-               </div>
-            </div>
-            
         </div>
         <!-- End Content Box -->
     </section>
@@ -553,21 +348,7 @@ include('requires/requireWeb.php');
 
                         </div>
                     
-                    <div class="col-md-3 col-sm-4">
-                        
-                            <a href="georgiaPackage.php">
-                                <img src="img/packages/3.jpg" class="img-responsive" alt="Work">
-                            </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/georgiaPackage.php" role="button">All Packages</a>
-
-                        </div>
-                    <div class="col-md-3 col-sm-4">
-                            <a href="azerbaijanPackage.php">
-                                <img src="img/packages/4.jpg" class="img-responsive" alt="Work">
-                            </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/azerbaijanPackage.php" role="button">All Packages</a>
-
-                        </div>
+                   
                 </div>
                    <!-- <div id="package-btn" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
 
@@ -721,77 +502,139 @@ include('requires/requireWeb.php');
     </section>
 
     
-   
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-
-        <div id="testimonials-cover" class="bg-parallax">
-            <div class="content-box">
-                <div class="content-title content-title-white wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                    <h3> What Our Customers Say </h3>
-                    <div class="content-title-underline"></div>
-                </div>
-
-                <div class="container">
-
-                    <div class="row wow animated bounceInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="col-md-12">
-
-                            <div id="customers-testimonials" class="text-center owl-carousel owl-theme">
-
-                                <div class="testimonial">
-                                    <img src="img/client/client-1.jpg" class="img-responsive img-circle" alt="testimonial">
-                                    <blockquote class="text-center">
-                                        <p>De cernantur concursionibus do incididunt fore nostrud, quibusdam anim quorum ubi quae id aute sed eiusmod ita fore et expetendis irure dolore te legam e do an efflorescere, voluptate quo.</p>
-                                    </blockquote>
-                                    <div class="testimonial-author">
-                                        <p>
-                                            <strong> Name 1 </strong>
-                                            <span> ABC </span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="testimonial">
-                                    <img src="img/client/client-2.jpg" class="img-responsive img-circle" alt="client" />
-                                    <blockquote class="text-center">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pulvinar augue. Ut feugiat viverra pellentesque. Integer scelerisque malesuada orci in cursus. Fusce pellentesque urna quis risus rutrum, vitae blandit urna pharetra. Praesent nunc enim, pharetra sed erat nec.</p>
-                                    </blockquote>
-
-                                    <div class="testimonial-author">
-                                        <p>
-                                            <strong>Name 2</strong>
-                                            <span>abc</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-
-                                <div class="testimonial">
-                                    <img src="img/client/client-3.jpg" class="img-responsive img-circle" alt="client" />
-                                    <blockquote class="text-center">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at pulvinar augue. Ut feugiat viverra pellentesque. Integer scelerisque malesuada orci in cursus. Fusce pellentesque urna quis risus rutrum, vitae blandit urna pharetra. Praesent nunc enim, pharetra sed erat nec.</p>
-                                    </blockquote>
-
-                                    <div class="testimonial-author">
-                                        <p>
-                                            <strong>Name 3</strong>
-                                            <span>abc</span>
-                                        </p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+   <!--Gallary-->
+<br>
+       <section id="gallary">
+        <div class="container">
+             <div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Gallary </h3>
+                <div class="content-title-underline">
                 </div>
             </div>
-            <!-- End Content Box -->
+      	<div class="row">
+		<div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="img/packages/1.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/1.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="img/packages/2.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/2.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="img/packages/3.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/3.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
+                   data-image="img/packages/4.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/4.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/5.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/5.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/6.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/6.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/7.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/7.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/8.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/8.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/9.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/9.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/10.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/10.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
         </div>
     </section>
 
@@ -817,6 +660,16 @@ include('requires/requireWeb.php');
     <script src="js/custom.js"></script>
     <!--easing Jquery-->
     <script src="js/easing/jquery.easing.1.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.compact-gallery', { animation: 'slideIn'});
+    </script>
 </body>
 
 </html>
+
+
+
+
+   
+   
