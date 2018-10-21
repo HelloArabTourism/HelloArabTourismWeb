@@ -43,7 +43,7 @@ h3>small{
 
 #top {
     padding: 0 0;
-    background: #3e4249;
+    background: #557A95;
 }
 
 #top.offer {
@@ -374,7 +374,7 @@ h3>small{
 
 .btn-blue {
     border-color: #337ab7;
-    color: #337ab7;
+    color: #557A95;
 }
 
 .btn-blue:hover,
@@ -461,7 +461,7 @@ h3>small{
 .content-title-underline {
     width: 30px;
     height: 3px;
-    background-color: #337ab7;
+    background-color: #557A95;
     margin: 0 auto 30px auto;
 }
 
@@ -476,7 +476,7 @@ Services
 }
 
 .service-item-icon {
-    color: #337ab7;
+    color: #557A95;
     float: left;
     padding: 15px;
     margin-right: 25px;
@@ -676,7 +676,7 @@ Social Icons
 }
 
 .social-icon i:hover {
-    color: #337ab7;
+    color: #557A95;
 
 }
 
@@ -865,9 +865,16 @@ Social Icons
   margin-top: 30px;
 }
 
-.footer-contacts p span {
-  color: #337ab7;
-  font-weight: 700;
+.footer-contacts ul{
+  list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+.footer-contacts ul li a{
+    
+    color: #557A95;
+    font-size: 15px;
 }
 
 .popular-tag ul li {
@@ -922,7 +929,7 @@ Social Icons
 }
 
 .copyright a, .credits a {
-  color: #337ab7;
+  color: #557A95;
 }
 
 .credits {
@@ -1037,7 +1044,7 @@ Social Icons
 #hot h2 {
     text-transform: uppercase;
     font-size: 36px;
-    color: #4993e4;
+    color: #557A95;
     font-weight: 100;
     text-align: center;
 }
@@ -1152,27 +1159,6 @@ Social Icons
         width: 95%;
         margin: 0 auto;
     }
-}
- @media (min-width: 768px) and (max-width: 991px) {
-      #myCarousel .carousel-inner .carousel-item .carousel-item-:last-child {
-        display: none;
-      }
-   }
-@media (max-width: 768px) {
-     #mymyCarousel .carousel-inner {
-      height: 320px;
-    }
- }
-.carousel-inner {
-  overflow-y: hidden;
-}
-.carousel-inner .active.left { left: -25%; }
-.carousel-inner .next        { left:  25%; }
-.carousel-inner .prev    { left: -25%; }
-.carousel-control        { width:  4%; }
-.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
-.carousel-inner .item-item {
-  padding:0!important;
 }
 
 
@@ -1307,5 +1293,17 @@ color: #999999;
  font-weight: 700;
  
  }
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
 
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 

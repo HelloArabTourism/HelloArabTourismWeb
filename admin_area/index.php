@@ -154,6 +154,7 @@ include('requires/requireWeb.php');
                             <li><a class="smooth-scroll" href="#services">Our Services</a></li>
                             <li><a class="smooth-scroll" href="#about">About Us</a></li>
                             <li><a class="smooth-scroll" href="#contact">Contact Us</a></li>
+                            <li><a class="smooth-scroll" href="#gallary">Gallary</a></li>
                             <li><a href="uaePackage.php">Hello Abu Dhabi</a></li>
                             <li><a href="bosnia.php">Hello Bosnia</a></li>
                             <li><a href="plantrip.php">Plan Your Trip</a></li>
@@ -280,16 +281,16 @@ include('requires/requireWeb.php');
                                 <div class='col-md-3 col-sm-4'>
                                 <div class='product'>
                             
-                            <a href='details.php?pro_id=$pid'>
+                            <a href='details.php?pid=$pid'>
                                 <img src='admin_area/packages/package_images/$p_img1'  class='img-responsive'>
                                 <div class='text'>
                                     
                                     <h3>
-                                        <a href='details.php?pro_id=$pid'>$p_title</a></h3>
+                                        <a href='details.php?pid=$pid'>$p_title</a></h3>
                                     <p class='price'>$ $p_price</p>
                                     <p class='buttons'>
-                                        <a href='details.php?pro_id=$pid' class='btn btn-default'>View detail</a>
-                                        <a href='details.php?pro_id=$pid' class='btn btn-primary'><i class='fa fa-shopping-cart'></i> Book Now</a>
+                                        <a href='details.php?pid=$pid' class='btn btn-default'>View detail</a>
+                                        <a href='details.php?pid=$pid' class='btn btn-primary'><i class='fa fa-shopping-cart'></i> Book Now</a>
                                     </p>
                                 </div>
                             </a>
@@ -333,16 +334,36 @@ include('requires/requireWeb.php');
                     <div class="col-md-3 col-sm-4">
                             <a href="packages.php">
                                 <img src="img/packages/1.jpg" class="img-responsive" alt="Work">
+                                <h3 class="text-center">Abu Dhabi Packages</h3>
                                 
                             </a><br>
                                                     <a class="btn btn-lg btn-general btn-blue center-block " href="packages.php" role="button">All Packages</a>
 
                     </div>
                     <div class="col-md-3 col-sm-4">
-                            <a href="bosniaPackage.php">
-                                <img src="img/packages/2.jpg" class="img-responsive" alt="Work">
+                            <a href="packages.php">
+                                <img src="img/packages/d1.jpg" class="img-responsive" alt="Work">
+                                <h3 class="text-center">Dubai Packages</h3>
                             </a><br>
-                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="destinations/bosniaPackage.php" role="button">All Packages</a>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="packages.php" role="button">All Packages</a>
+                                                    
+
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <a href="packages.php">
+                                <img src="img/packages/f1.jpg" class="img-responsive" alt="Work">
+                                <h3 class="text-center">Other Emirates States Packages</h3>
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="packages.php" role="button">All Packages</a>
+                                                    
+
+                        </div>
+                         <div class="col-md-3 col-sm-4">
+                            <a href="packages.php">
+                                <img src="img/packages/14.jpg" class="img-responsive" alt="Work">
+                                <h3 class="text-center">Hello Special Packages</h3>
+                            </a><br>
+                                                    <a class="btn btn-lg btn-general btn-blue center-block " href="packages.php" role="button">All Packages</a>
                                                     
 
                         </div>
@@ -502,102 +523,158 @@ include('requires/requireWeb.php');
 
     
    <!--Gallary-->
-<!--
-       <section class="gallery-block compact-gallery">
+<br>
+       <section id="gallary">
         <div class="container">
              <div class="content-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
                 <h3> Gallary </h3>
                 <div class="content-title-underline">
                 </div>
             </div>
-            <div class="row no-gutters">
-                <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/1.jpg">
-                        <img class="img-fluid image" src="img/packages/1.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/2.jpg">
-                        <img class="img-fluid image" src="img/packages/2.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/3.jpg">
-                        <img class="img-fluid image" src="img/packages/3.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/4.jpg">
-                        <img class="img-fluid image" src="img/packages/4.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/5.jpg">
-                        <img class="img-fluid image" src="img/packages/5.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/6.jpg">
-                        <img class="img-fluid image" src="img/packages/6.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/7.jpg">
-                        <img class="img-fluid image" src="img/packages/7.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/8.jpg">
-                        <img class="img-fluid image" src="img/packages/8.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                    <a class="lightbox" href="img/packages/9.jpg">
-                        <img class="img-fluid image" src="img/packages/9.jpg">
-                        <span class="description">
-                            <span class="description-heading">Lorem Ipsum</span>
-                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                        </span>
-                        </a>
-                    </div>
-                
-                
+      	<div class="row">
+		<div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="img/packages/1.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/1.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="img/packages/2.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/2.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="img/packages/3.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/3.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
+                   data-image="img/packages/4.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/4.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/5.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/5.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/6.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/6.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/7.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/7.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/8.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/8.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/9.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/9.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/10.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/10.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/11.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/11.jpg"
+                         alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                   data-image="img/packages/12.jpg"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src="img/packages/12.jpg"
+                         alt="Another alt text">
+                </a>
             </div>
         </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+        </div>
     </section>
--->
 
 <!--Footer-->
 <?php

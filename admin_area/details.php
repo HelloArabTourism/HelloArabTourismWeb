@@ -1,6 +1,25 @@
 <?php
+include("requires/db.php");
 include('requires/requireWeb.php');
-
+?>
+<?php
+if(isset($_GET['pid'])){
+    $pid = $_GET['pid'];
+    $get_product = "select * from packages where pid='$pid'";
+    $run_product= mysqli_query($connection, $get_product);
+    $row_product= mysqli_fetch_array($run_product);
+    $cat_t_id = $row_product['cat_t_id'];
+    $package_title = $row_product['package_title'];
+    $package_price = $row_product['package_price'];
+    $package_desc = $row_product['package_desc'];
+    $pro_img1 = $row_product['img1'];
+    $pro_img2 = $row_product['img2'];
+    $pro_img3 = $row_product['img3'];
+    $get_p_cat = "select * from tour_categories where cat_t_id = '$cat_t_id'";
+    $run_p_cat = mysqli_query($connection, $get_p_cat);
+    $row_p_cat = mysqli_fetch_array($run_p_cat);
+    $cat_t_title = $row_p_cat['cat_t_title'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,8 +159,8 @@ include('requires/requireWeb.php');
                 <ul class="breadcrumb">
                     <!--breadcrumb-->
                     <li><a href="index.php">Home</a></li>
-                    <li>Abu Dhabi Packages</li>
-
+                    <li><a href="packages.php">Packages</a></li>
+                    <li><?php echo $package_title;?></li>
                 </ul>
                 <!--breadcrumb end-->
 
@@ -157,268 +176,205 @@ include('requires/requireWeb.php');
             </div>
             <!--col-md-3 ends-->
 
-            <!--col-md-9-->
-            <div class="row" id="productMain">
-                <!--row1-->
-                <div class="col-sm-6">
-                    <!-- col-sm-6 Starts -->
+            <div class="col-md-9">
+                <!--col-md-9-->
+                <div class="row" id="productMain">
+                    <!--row1-->
+                    <div class="col-sm-6">
+                        <!-- col-sm-6 Starts -->
 
-                    <div id="mainImage">
-                        <!-- mainImage Starts -->
+                        <div id="mainImage">
+                            <!-- mainImage Starts -->
 
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-                            <ol class="carousel-indicators">
-                                <!-- carousel-indicators Starts -->
+                                <ol class="carousel-indicators">
+                                    <!-- carousel-indicators Starts -->
 
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
 
-                            </ol>
-                            <!-- carousel-indicators Ends -->
+                                </ol>
+                                <!-- carousel-indicators Ends -->
 
-                            <div class="carousel-inner">
-                                <!-- carousel-inner Starts -->
+                                <div class="carousel-inner">
+                                    <!-- carousel-inner Starts -->
 
-                                <div class="carousel-item active">
-                                    <center>
-                                        <img src="img/packages/1.jpg" class="img-responsive">
-                                    </center>
+                                    <div class="item active">
+                                        <center>
+                                            <img src="admin_area/packages/package_images/<?php echo $pro_img1; ?>" class="img-responsive">
+                                        </center>
+                                    </div>
+
+                                    <div class="item">
+                                        <center>
+                                            <img src="admin_area/packages/package_images/<?php echo $pro_img2; ?>" class="img-responsive">
+                                        </center>
+                                    </div>
+
+                                    <div class="item">
+                                        <center>
+                                            <img src="admin_area/packages/package_images/<?php echo $pro_img3; ?>" class="img-responsive">
+                                        </center>
+                                    </div>
+
                                 </div>
+                                <!-- carousel-inner Ends -->
 
-                                <div class="carousel-item">
-                                    <center>
-                                        <img src="img/packages/1.jpg" class="img-responsive">
-                                    </center>
-                                </div>
+                                <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                                    <!-- left carousel-control Starts -->
 
-                                <div class="carousel-item">
-                                    <center>
-                                        <img src="img/packages/1.jpg" class="img-responsive">
-                                    </center>
-                                </div>
+                                    <span class="glyphicon glyphicon-chevron-left"> </span>
+
+                                    <span class="sr-only"> Previous </span>
+
+                                </a>
+                                <!-- left carousel-control Ends -->
+
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <!-- right carousel-control Starts -->
+
+                                    <span class="glyphicon glyphicon-chevron-right"> </span>
+
+                                    <span class="sr-only"> Next </span>
+
+                                </a>
+                                <!-- right carousel-control Ends -->
 
                             </div>
-                            <!-- carousel-inner Ends -->
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+
                         </div>
+                        <!-- mainImage Ends -->
+
                     </div>
-                    <!-- mainImage Ends -->
-
-                </div>
-                <!-- col-sm-6 Ends -->
-
-                <div class="col-sm-6">
-                    <!--col-sm-6-->
-                    <div class="box">
-                        <!--box-->
-                        <h1 class="text-center">7 Days Abu Dhabi Package</h1>
-                        <form action="details.php" method="post" class="form-horizontal">
-                            <!--form-horizontal-->
-                            <div class="form-group">
-                                <!--form-group-->
-                                <label class="col-md-5 control-label">Adult</label>
-                                <div class="col-md-7">
-                                    <!--col-md-7-->
-                                    <select name="product_qty" class="form-control">
+                    <!-- col-sm-6 Ends -->
+                    
+                    <div class="col-sm-6"><!--col-sm-6-->
+                        <div class="box"><!--box-->
+                           <h1 class="text-center"><?php echo $package_title; ?></h1>
+                           <?php add_cart(); ?>
+                            <form action="index.php?add_cart=<?php echo $pid; ?>" method="post" class="form-horizontal"><!--form-horizontal-->
+                                <div class="form-group"><!--form-group-->
+                                    <label class="col-md-5 control-label">Product Quantity</label>
+                                    <div class="col-md-7"><!--col-md-7-->
+                                       <select name="product_qty" class="form-control">
                                           <option>1</option>
                                           <option>2</option>
                                           <option>3</option>
                                           <option>4</option>
                                           <option>5</option>
                                        </select>
-
-                                </div>
-                                <!--col-md-7 end-->
-                                <label class="col-md-5 control-label">Children</label>
-                                <div class="col-md-7">
-                                    <!--col-md-7-->
-                                    <select name="product_qty" class="form-control">
-                                          <option>1</option>
-                                          <option>2</option>
-                                          <option>3</option>
-                                          <option>4</option>
-                                          <option>5</option>
-                                       </select>
-
-                                </div>
-                                <!--col-md-7 end-->
-                                <label class="col-md-5 control-label">Infant</label>
-                                <div class="col-md-7">
-                                    <!--col-md-7-->
-                                    <select name="product_qty" class="form-control">
-                                          <option>1</option>
-                                          <option>2</option>
-                                          <option>3</option>
-                                          <option>4</option>
-                                          <option>5</option>
-                                       </select>
-
-                                </div>
-                                <!--col-md-7 end-->
-                            </div>
-                            <!--form-group end-->
-                            <div class="form-group">
-                                <!--form-group-->
-                                <label class="col-md-5 control-label">Product Size</label>
-                                <div class="col-md-7">
-                                    <!--col-md-7-->
-                                    <select name="product_size" class="form-control">
+                                        
+                                    </div><!--col-md-7 end-->
+                                </div><!--form-group end-->
+                                <div class="form-group"><!--form-group-->
+                                    <label class="col-md-5 control-label">Product Size</label>
+                                    <div class="col-md-7"><!--col-md-7-->
+                                        <select name="product_size" class="form-control" >
                                             <option>Select a Size</option>
                                             <option>Small</option>
                                             <option>Medium</option>
                                             <option>Large</option>
 
                                         </select>
-                                </div>
-                                <!--col-md-7 end-->
-
-                            </div>
-                            <!--form-group end-->
-
-                            <p class="price">$2000</p>
-                            <p class="text-center buttons">
-                                <!--text-center buttons-->
-                                <button class="btn btn-primary" type="submit">
+                                    </div><!--col-md-7 end-->
+            
+                                </div><!--form-group end-->
+                                
+                                <p class="price">$ <?php echo $package_price; ?></p>
+                                <p class="text-center buttons"><!--text-center buttons-->
+                                    <button class="btn btn-primary" type="submit">
                                         <i class="fa fa-shopping-cart"></i>Add to Cart
                                     </button>
-                            </p>
-                            <!--text-center buttons end-->
-
-                        </form>
-                        <!--form-horizontal end-->
-                    </div>
-                    <!--box end-->
-
-                    <div class="row" id="thumbs">
-                        <!--row-->
-                        <div class="col-xs-4">
-                            <!--col-xs-4-->
-                            <a href="#" class="thumb">
-                                    <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                </a>
-                        </div>
-                        <!--col-xs-4 end-->
-                        <div class="col-xs-4">
-                            <!--col-xs-4-->
-                            <a href="#" class="thumb">
-                                    <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                </a>
-                        </div>
-                        <!--col-xs-4 end-->
-                        <div class="col-xs-4">
-                            <!--col-xs-4-->
-                            <a href="#" class="thumb">
-                                    <img src="img/packages/1.jpg" alt="" class="img-responsive">
-                                </a>
-                        </div>
-                        <!--col-xs-4 end-->
-                    </div>
-                    <!--row end-->
-                </div>
-                <!--col-sm-6 end-->
-
-
-
-            </div>
-            <!--row end-->
-            <div class="box" id="details">
-                <!--box-->
-                <p>
-                    <!--p-->
-                    <h4>Tour Details</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni dolore facilis ducimus velit fugiat odit inventore earum ullam voluptate quam veniam ipsum maiores eaque labore ut molestias, quas suscipit sapiente!</p>
-                    <h4>Activities</h4>
-                    <ul>
-                        <li>Day 1</li>
-                        <li>Day 2</li>
-                        <li>Day 3</li>
-                        <li>Day 4</li>
-                        <li>Day 5</li>
-                        <li>Day 6</li>
-                        <li>Day 7</li>
+                                </p><!--text-center buttons end-->
+                                
+                            </form><!--form-horizontal end-->
+                        </div><!--box end-->
                         
+                        <div class="row" id="thumbs"><!--row-->
+                            <div class="col-xs-4"><!--col-xs-4-->
+                                <a href="#" class="thumb">
+                                    <img src="admin_area/packages/package_images/<?php echo $pro_img1; ?>" alt="" class="img-responsive">
+                                </a>
+                            </div><!--col-xs-4 end-->
+        <div class="col-xs-4"><!--col-xs-4-->
+                                <a href="#" class="thumb">
+                                    <img src="admin_area/packages/package_images/<?php echo $pro_img2; ?>" alt="" class="img-responsive">
+                                </a>
+                            </div><!--col-xs-4 end-->
+                                    <div class="col-xs-4"><!--col-xs-4-->
+                                <a href="#" class="thumb">
+                                    <img src="admin_area/packages/package_images/<?php echo $pro_img3; ?>" alt="" class="img-responsive">
+                                </a>
+                            </div><!--col-xs-4 end-->
+                        </div><!--row end-->
+                    </div><!--col-sm-6 end-->
+                    
+                    
+
+                </div>
+                <!--row end-->
+                <div class="box" id="details"><!--box-->
+                    <p><!--p-->
+                    <h4>Product Details</h4>
+                    <p><?php echo $package_desc; ?></p>
+                    <h4>Size</h4>
+                    <ul>
+                        <li>Small</li>
+                        <li>Medium</li>
+                        <li>Large</li>
                     </ul>
-                </p>
-                <!--p end-->
-                <hr>
+                    </p><!--p end-->
+                    <hr>
+                </div><!--box end-->
+                <div id="row same-height-row"><!--row same-height-row-->
+                    <div class="col-md-3 col-sm-6"><!--col-md-3 col-sm-6-->
+                       <div class="box same-height headline"><!--box same-height headline-->
+                          <h3 class="text-center">You also like these Packages</h3>   
+                       </div><!--box same-height headline end-->
+                    </div><!--col-md-3 col-sm-6 end-->
+                    
+                    <?php
+                    $get_products="select * from packages order by rand() LIMIT 0,3";
+                    $run_products = mysqli_query($connection, $get_products);
+                    while($row_products = mysqli_fetch_array($run_products)){
+                        $pro_id = $row_products['pid'];
+                        $pro_title = $row_products['package_title'];
+                        $pro_price = $row_products['package_price'];
+                        $pro_img1 = $row_products['img1'];
+                        echo "
+                        
+                        <div class='center-responsive col-md-3 col-sm-6'>
+                       <div class='product same-height'>
+                           <a href='details.php?pro_id=$pid'><img src='admin_area/packages/package_images/$pro_img1' class='img-responsive'></a>
+                           <div class='text'>
+                               <h3><a href='details.php?pro_id=$pid'>$package_title</a></h3>
+                               <p class='price'>$ $package_price</p>
+                           </div>
+                       </div>
+                        
+                    </div>
+                        
+                        
+                        ";
+                        
+                    }
+                    
+                    
+                    ?>
+                    
+            
+                </div><!--row same-height-row end-->
+           
             </div>
-            <!--box end-->
-            <div id="row same-height-row">
-                <!--row same-height-row-->
-                <div class="col-md-3 col-sm-6">
-                    <!--col-md-3 col-sm-6-->
-                    <div class="box same-height headline">
-                        <!--box same-height headline-->
-                        <h3 class="text-center">Recommanded Tour Packages</h3>
-                    </div>
-                    <!--box same-height headline end-->
-                </div>
-                <!--col-md-3 col-sm-6 end-->
+            <!--col-md-9 end-->
 
-                <div class="center-responsive col-md-3 col-sm-6">
-                    <!--center-responsive col-md-3 col-sm-6-->
-                    <div class="product same-height">
-                        <!--product same-height-->
-                        <a href="details.php"><img src="img/packages/1.jpg" class="img-responsive"></a>
-                        <div class="text">
-                            <!--text-->
-                            <h3><a href="details.php">Premium Abu Dhabi Package</a></h3>
-                            <p class="price">$3000</p>
-                        </div>
-                        <!--text end-->
-                    </div>
-                    <!--product same-height end-->
 
-                </div>
-                <!--center-responsive col-md-3 col-sm-6 end-->
-                <div class="center-responsive col-md-3 col-sm-6">
-                    <!--center-responsive col-md-3 col-sm-6-->
-                    <div class="product same-height">
-                        <!--product same-height-->
-                        <a href="details.php"><img src="img/packages/1.jpg" class="img-responsive"></a>
-                        <div class="text">
-                            <!--text-->
-                            <h3><a href="details.php">Premium Dubai Package</a></h3>
-                            <p class="price">$5000</p>
-                        </div>
-                        <!--text end-->
-                    </div>
-                    <!--product same-height end-->
 
-                </div>
-                <!--center-responsive col-md-3 col-sm-6 end-->
-                <div class="center-responsive col-md-3 col-sm-6">
-                    <!--center-responsive col-md-3 col-sm-6-->
-                    <div class="product same-height">
-                        <!--product same-height-->
-                        <a href="details.php"><img src="img/packages/1.jpg" class="img-responsive"></a>
-                        <div class="text">
-                            <!--text-->
-                            <h3><a href="details.php">Adventure UAE Package</a></h3>
-                            <p class="price">$3000</p>
-                        </div>
-                        <!--text end-->
-                    </div>
-                    <!--product same-height end-->
-
-                </div>
-                <!--center-responsive col-md-3 col-sm-6 end-->
-            </div>
-            <!--row same-height-row end-->
 
         </div>
-        <!--col-md-9 end-->
-    </div>
-    <!--container ends-->
+        <!--container ends-->
 
     </div>
     <!--content ends-->
@@ -440,8 +396,7 @@ include('requires/requireWeb.php');
         <script src="js/wow/wow.min.js"></script>
         <!--magnific popup js-->
         <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <!--Owl Carousel JS-->
-        <script src="js/owl-carousel/owl.carousel.min.js"></script>
+        
         <!--Google Map-->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAot2fgi5npA_GhLlOr4-YAd4MQlSPp_yk"></script>
         <script src="js/map/map.js"></script>
@@ -449,11 +404,6 @@ include('requires/requireWeb.php');
         <script src="js/custom.js"></script>
         <!--easing Jquery-->
         <script src="js/easing/jquery.easing.1.3.js"></script>
-
-
-        <script type="text/javascript">
-            TranslateIt.init();
-        </script>
 </body>
 
 </html>

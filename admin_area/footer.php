@@ -148,7 +148,12 @@
                                     <h4>Company</h4>
                                     
                                     <div class="footer-contacts">
-                                       
+                                       <ul>
+                                        <li><a href="#">Become Our Partner</a></li>
+                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +167,14 @@
                                     <h4>Services</h4>
                                     
                                     <div class="footer-contacts">
-                                        
+                                       <ul>
+                                        <li><a href="#">Tour Packages</a></li>
+                                        <li><a href="#">Visa</a></li>
+                                        <li><a href="#">Air Tickets</a></li>
+                                        <li><a href="#">Hotel</a></li>
+                                        <li><a href="#">Car Rental</a></li>
+                                        <li><a href="#">Travel Consultancy</a></li>
+                                    </ul> 
                                     </div>
                                 </div>
                             </div>
@@ -171,9 +183,15 @@
                             <div class="footer-content">
                                 <div class="footer-head">
                                     <h4>Tour Offers</h4>
-                                    
+                                     
                                     <div class="footer-contacts">
+                                        <ul>
+                                        <li><a href="#">Abu Dhabi Tour Packages</a></li>
+                                        <li><a href="#">Dubai Tour Packages</a></li>
+                                        <li><a href="#">Other Emirates States Tour Packages</a></li>
+                                        <li><a href="#">Hello Arab Special Tour Packages</a></li>
                                         
+                                    </ul>
                                     </div>
                                 </div>
                             </div>

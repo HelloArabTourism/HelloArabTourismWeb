@@ -259,6 +259,12 @@ include('requires/requireWeb.php');
                     <!--pagination end-->
                 </center>
                 <!--center end-->
+                
+                <?php
+                gettcatpro();
+                getcatpro();
+                
+                ?>
 
             </div>
             <!--col-md-9 ends-->

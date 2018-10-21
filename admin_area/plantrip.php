@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
     $child =mysqli_real_escape_string($connection,$_POST['child']);
     $infant = mysqli_real_escape_string($connection,$_POST['infant']);
     $service = implode(", ", $_POST['service']);
-    $message =mysqli_real_escape_string($connection,$_POST['message']);
+    $message =$_POST['message'];
     $ptSql = "INSERT INTO `plantrip`(`tDesc`, `travelDateF`, `travelDateT`, `name`, `email`, `contactno`, `adult`, `child`, `infant`, `services`, `message`) VALUES ('$descName','$d1','$d2','$cName','$email','$cNum','$adult','$child','$infant','$service','$message')";
     $ptResult = mysqli_query($connection,$ptSql);
 
@@ -236,8 +236,13 @@ echo "<script>window.open('plantrip.php','_self')</script>";
                     <h1 class="text-center">Plan Your Trip</h1>
                     <form action="plantrip.php" method="post">
                         <div class="form-group">
-                            <label class="control-label">Enter Designation </label>
-                            <input type="text" class="form-control" name="descName" placeholder="Required*" required>
+                            <label class="control-label">Select Designation </label>
+                            <select name="descName" class="form-control" required>
+                                        <option value="Abu Dhabi">Abu Dhabi</option>
+                                         <option value="Dubai">Dubai</option>
+                                          <option value="Other Emirates States">Other Emirates States</option>
+                                          <option value="Bosnia">Bosnia &amp; Herzegovina</option>
+                                       </select>
                         </div>
                         <div class="form-group">
                             <label class="control-label">Travel Date From </label>
@@ -343,7 +348,9 @@ echo "<script>window.open('plantrip.php','_self')</script>";
                             <label>Message</label>
                             <textarea class="form-control" name="message" placeholder="Optional"></textarea>
                         </div>
+                        <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LdWCXQUAAAAAB6s-p6GfD5CpBcNYHFnUACJoGmY"></div>
+                        </div>
 
                         <!--form-group end-->
                         <p class="text-center buttons">
